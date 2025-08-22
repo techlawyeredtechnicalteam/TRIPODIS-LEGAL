@@ -7,7 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white py-12">
-      <Container>
+      <Container size="full">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-light tracking-widest mb-4">
@@ -42,18 +42,16 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/peopl" className="hover:text-white transition">
+                <Link to="/people" className="hover:text-white transition">
                   People
                 </Link>
               </li>
               <li>
-                <Link to="/practice-area" className="hover:text-white transition">
+                <Link
+                  to="/practice-page"
+                  className="hover:text-white transition"
+                >
                   Practice Area
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-white transition">
-                  Contact
                 </Link>
               </li>
             </ul>

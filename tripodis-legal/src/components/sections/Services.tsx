@@ -16,7 +16,7 @@ const ServiceSection: React.FC = () => {
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             We offer a full range of legal services tailored to meet your
-            specific needs, backed by decades of experience and expertise.
+            specific needs.
           </p>
         </div>
 
@@ -33,12 +33,10 @@ const ServiceSection: React.FC = () => {
                   alt={service.title}
                   className="w-full h-32 object-cover"
                 />
-                {/* <service.icon className="w-12 h-12 text-emerald-600" /> */}
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-3">
                 {service.title}
               </h3>
-              <p className="text-slate-600 mb-4">{service.description}</p>
             </Card>
           ))}
         </div>

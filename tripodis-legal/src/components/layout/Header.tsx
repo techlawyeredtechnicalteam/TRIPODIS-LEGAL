@@ -38,15 +38,15 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <nav className="relative z-50 bg-slate-800/90 backdrop-blur-sm border-b border-slate-700/50">
-      <Container>
+      <Container size="full">
         <div className="flex items-center justify-between py-4 sm:py-6">
           {/* Logo */}
           <div className="flex items-center">
-            <button onClick={() => handleNavClick("/")}>
+            <button type="button" onClick={() => handleNavClick("/")}>
               <img
                 src="/logo-1.jpg"
                 alt="Tripodis Legal Logo"
-                className="h-10 sm:h-10"
+                className="h-14 sm:h-14"
               />
             </button>
           </div>
@@ -56,8 +56,10 @@ const Header: React.FC<HeaderProps> = ({
             {NAVIGATION_ITEMS.map((nav) => (
               <div key={nav.label} className="relative">
                 <button
+                  type="button"
+                  aria-label="Desktop Nav"
                   onClick={() => handleNavClick(nav.href)}
-                  className={`transition-colors text-sm font-medium ${
+                  className={`transition-colors text-xl font-medium ${
                     isActive(nav.href)
                       ? "text-blue-500"
                       : "text-white hover:text-blue-400"
@@ -72,13 +74,14 @@ const Header: React.FC<HeaderProps> = ({
           {/* Contact Button */}
           <div className="flex items-center space-x-4">
             <div className="hidden sm:block">
-              <Button variant="outline" size="sm" onClick={handleContactClick}>
+              <Button variant="outline" size="md" onClick={handleContactClick}>
                 Contact Us
               </Button>
             </div>
 
             {/* Mobile Menu */}
             <button
+              type="button"
               className="lg:hidden text-white hover:text-blue-300 transform-colors p-2"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
@@ -99,8 +102,9 @@ const Header: React.FC<HeaderProps> = ({
               {NAVIGATION_ITEMS.map((nav) => (
                 <div key={nav.label}>
                   <button
+                    type="button"
                     onClick={() => handleNavClick(nav.href)}
-                    className={`block transition-colors text-sm font-medium py-2 ${
+                    className={`block transition-colors text-base font-medium py-2 ${
                       isActive(nav.href)
                         ? "text-blue-500"
                         : "text-white hover:text-blue-400"
@@ -116,7 +120,7 @@ const Header: React.FC<HeaderProps> = ({
             <div className="pt-4 border-t border-slate-700 sm:hidden">
               <Button
                 variant="outline"
-                size="sm"
+                size="md"
                 onClick={handleContactClick}
                 className="w-full"
               >

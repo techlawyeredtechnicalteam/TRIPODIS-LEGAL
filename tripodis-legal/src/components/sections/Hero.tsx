@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ onBookConsultation }) => {
 
       {/* Main Content */}
       <div className="relative z-20 pt-8 sm:pt-16 lg:pt-24 pb-16">
-        <Container>
+        <Container size="full">
           <div className="max-w-2xl">
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight mb-6 sm:mb-8">

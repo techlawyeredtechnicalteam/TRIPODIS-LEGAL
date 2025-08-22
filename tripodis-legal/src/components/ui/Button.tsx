@@ -32,7 +32,7 @@ export const Button: React.FC<ButtonProps> = ({
     outline:
       "border-2 border-blue-400 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500",
     ghost:
-      "text-white hover:text-blue-400 hover:bg-white/10 focus:ring-white/20"
+      "text-blue-500 hover:text-blue-400 hover:bg-blue/10 focus:ring-blue/20"
   };
 
   const sizes = {
