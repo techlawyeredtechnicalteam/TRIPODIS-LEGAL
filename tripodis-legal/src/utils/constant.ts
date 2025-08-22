@@ -2,11 +2,10 @@
 import type { NavItem } from "../types/NavItem";
 import type { TeamMember } from "../types/People";
 import type { ServiceArea } from "../types/ServiceArea";
-// import {
-//   CrystalStructure,
-//   BackgroundEffects
-// } from "../components/sections/BackgroundEffect";
-// import type { JSX } from "react/jsx-runtime";
+import {
+  CrystalStructure,
+  BackgroundEffects
+} from "../components/sections/BackgroundEffect";
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: "About Us", href: "/about" },
@@ -103,27 +102,20 @@ export const teamMembers: TeamMember[] = [
   }
 ];
 
-// export const sliderImages = [
-//   // First slide: BackgroundEffect
-//   {
-//     type: "effect",
-//     content: (
-//       <>
-//         <BackgroundEffects />
-//         <CrystalStructure />
-//       </>
-//     )
-//   },
-//   // Second slide: Lagos Skyline
-//   {
-//     type: "image",
-//     src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80", // Replace with your preferred image
-//     alt: "Lagos Skyline"
-//   },
-//   // Third slide: Business Meeting
-//   {
-//     type: "image",
-//     src: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80", // Replace with your preferred image
-//     alt: "Business Meeting"
-//   }
-// ];
+export const sliderImages = [
+  // First slide: BackgroundEffect
+  {
+    type: "effect",
+    content: [BackgroundEffects, CrystalStructure]
+  },
+  {
+    type: "image",
+    src: "/corporate.jpg",
+    alt: "Business Meeting"
+  },
+  {
+    type: "image",
+    src: "/lagos.jpg",
+    alt: "Lagos Skyline"
+  }
+];

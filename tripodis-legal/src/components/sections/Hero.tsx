@@ -1,12 +1,21 @@
 import React from "react";
 import { Button, Container } from "../ui";
-import { BackgroundEffects, CrystalStructure } from "./BackgroundEffect";
+import { sliderImages } from "../../utils/constant";
 
 interface HeroProps {
   onBookConsultation?: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({ onBookConsultation }) => {
+  const [current, setCurrent] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % sliderImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   const handleBookConsultation = () => {
     if (onBookConsultation) {
       onBookConsultation();
@@ -16,9 +25,32 @@ const Hero: React.FC<HeroProps> = ({ onBookConsultation }) => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from bg-slate-700 via-slate-600 to-slate-800 overflow-hidden">
-      <BackgroundEffects />
-      <CrystalStructure />
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 overflow-hidden">
+      {/* slides */}
+      {sliderImages.map((slide, index) => (
+        <div
+          key={index}
+          className={`absolute inset-0 transition-opacity duration-3000 ${
+            current === index ? "opacity-100 z-10" : "opacity-0 z-0"
+          }`}
+        >
+          {slide.type === "effect" ? (
+            <div className="w-full h-full">
+              {Array.isArray(slide.content)
+                ? slide.content.map((Component, idx) => <Component key={idx} />)
+                : slide.content}
+            </div>
+          ) : (
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent" />
+        </div>
+      ))}
 
       {/* Main Content */}
       <div className="relative z-20 pt-8 sm:pt-16 lg:pt-24 pb-16">

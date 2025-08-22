@@ -37,16 +37,16 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <nav className="relative z-50 bg-slate-800/90 backdrop-blur-sm border-b border-slate-700/50">
+    <nav className="relative z-5 bg-white backdrop-blur-sm border-b border-slate-700/50">
       <Container size="full">
-        <div className="flex items-center justify-between py-4 sm:py-6">
+        <div className="flex items-center justify-between py-2 sm:py-2">
           {/* Logo */}
           <div className="flex items-center">
             <button type="button" onClick={() => handleNavClick("/")}>
               <img
                 src="/logo-1.jpg"
                 alt="Tripodis Legal Logo"
-                className="h-14 sm:h-14"
+                className="h-16 sm:h-16"
               />
             </button>
           </div>
@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({
                   className={`transition-colors text-xl font-medium ${
                     isActive(nav.href)
                       ? "text-blue-500"
-                      : "text-white hover:text-blue-400"
+                      : "text-gray-800 hover:text-blue-500"
                   }`}
                 >
                   {nav.label}
@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({
             {/* Mobile Menu */}
             <button
               type="button"
-              className="lg:hidden text-white hover:text-blue-300 transform-colors p-2"
+              className="lg:hidden text-gray-800 hover:text-blue-300 transform-colors p-2"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
@@ -107,7 +107,7 @@ const Header: React.FC<HeaderProps> = ({
                     className={`block transition-colors text-base font-medium py-2 ${
                       isActive(nav.href)
                         ? "text-blue-500"
-                        : "text-white hover:text-blue-400"
+                        : "text-gray-800 hover:text-blue-500"
                     }`}
                   >
                     {nav.label}

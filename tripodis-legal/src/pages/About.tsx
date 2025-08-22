@@ -1,45 +1,36 @@
 import React from "react";
 import { Card, Container } from "../components/ui";
-// import {
-//   Users,
-//   Award,
-//   Calendar,
-//   MapPin,
-//   Scale,
-//   TrendingUp,
-//   Target,
-//   Shield,
-//   Lightbulb
-// } from "lucide-react";
-// import { Container }
-// import { Card } from "./Card";
-// import { Button } from "./Button";
+import { TbTargetArrow } from "react-icons/tb";
+import { CiUser } from "react-icons/ci";
+import { PiScales, PiLightbulbThin } from "react-icons/pi";
+import { FiAward } from "react-icons/fi";
+import { MdShield } from "react-icons/md";
 
 const AboutUsPage: React.FC = () => {
   const stats = [
     {
-      // icon: MapPin,
+      icon: TbTargetArrow,
       label: "Strategic Location",
       value: "Lagos",
       color: "text-blue-400"
     },
     {
-      // icon: Users,
+      icon: CiUser,
       label: "Regional Coverage",
       value: "West Africa",
-      color: "text-green-400"
+      color: "text-blue-400"
     },
     {
-      // icon: Scale,
+      icon: PiScales,
       label: "Legal Expertise",
       value: "Comprehensive",
-      color: "text-purple-400"
+      color: "text-blue-400"
     },
     {
-      // icon: Award,
+      icon: FiAward,
       label: "Service Focus",
       value: "Business Growth",
-      color: "text-orange-400"
+      color: "text-blue-400"
     }
   ];
 
@@ -48,22 +39,22 @@ const AboutUsPage: React.FC = () => {
       title: "Excellence",
       description:
         "We maintain the highest standards in all our legal services, ensuring quality outcomes for every client.",
-      // icon: Award,
+      icon: FiAward,
       color: "bg-blue-500/20 text-blue-400"
     },
     {
       title: "Professionalism",
       description:
         "Our approach is grounded in professional integrity and adherence to the highest ethical standards.",
-      // icon: Shield,
-      color: "bg-green-500/20 text-green-400"
+      icon: MdShield,
+      color: "bg-blue-500/20 text-blue-400"
     },
     {
       title: "Practical Innovation",
       description:
         "We view law as a practical tool for business growth, not just theoretical exercise.",
-      // icon: Lightbulb,
-      color: "bg-purple-500/20 text-purple-400"
+      icon: PiLightbulbThin,
+      color: "bg-blue-500/20 text-blue-400"
     }
   ];
 
@@ -121,7 +112,7 @@ const AboutUsPage: React.FC = () => {
               </h2>
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  {/* <Target className="w-6 h-6 text-green-400" /> */}
+                  <TbTargetArrow className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
                   <h3 className="text-gray-800 font-semibold">
@@ -165,12 +156,12 @@ const AboutUsPage: React.FC = () => {
         <Container>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => {
-              // const IconComponent = stat.icon;
+              const IconComponent = stat.icon;
               return (
                 <Card key={index} className="p-6 text-center">
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-blue/10 rounded-lg flex items-center justify-center">
-                      {/* <IconComponent className={`w-6 h-6 ${stat.color}`} /> */}
+                      <IconComponent className={`w-6 h-6 ${stat.color}`} />
                     </div>
                   </div>
                   <div className="text-lg lg:text-xl font-bold text-gray-700 mb-2">
@@ -199,14 +190,14 @@ const AboutUsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {values.map((value, index) => {
-              // const IconComponent = value.icon;
+              const IconComponent = value.icon;
               return (
                 <Card key={index} hover className="p-8 text-center">
                   <div className="flex justify-center mb-6">
                     <div
                       className={`w-16 h-16 rounded-xl flex items-center justify-center ${value.color}`}
                     >
-                      {/* <IconComponent className="w-8 h-8" /> */}
+                      <IconComponent className="w-8 h-8" />
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-4">
