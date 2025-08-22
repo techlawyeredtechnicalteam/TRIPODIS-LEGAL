@@ -9,15 +9,6 @@ const BackgroundEffects: React.FC = () => {
         <div className="absolute bottom-40 right-40 w-28 h-28 bg-gradient-to-r from-orange-400/20 to-red-400/20 transform rotate-45 blur-sm"></div>
         <div className="absolute bottom-20 right-60 w-36 h-36 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 transform -rotate-30 blur-sm"></div>
       </div>
-
-      {/* Floating moss-like elements */}
-      {/* <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-32 right-16 w-8 h-8 bg-blue-500/30 rounded-full blur-sm animate-pulse"></div>
-        <div className="absolute top-48 right-44 w-6 h-6 bg-blue-400/40 rounded-full blur-sm animate-pulse delay-1000"></div>
-        <div className="absolute top-72 right-28 w-10 h-10 bg-lime-500/30 rounded-full blur-sm animate-pulse delay-2000"></div>
-        <div className="absolute bottom-48 right-52 w-7 h-7 bg-blue-400/35 rounded-full blur-sm animate-pulse delay-500"></div>
-        <div className="absolute bottom-32 right-36 w-9 h-9 bg-blue-500/30 rounded-full blur-sm animate-pulse delay-1500"></div>
-      </div> */}
     </>
   );
 };
