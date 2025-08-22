@@ -2,11 +2,11 @@
 import type { NavItem } from "../types/NavItem";
 import type { TeamMember } from "../types/People";
 import type { ServiceArea } from "../types/ServiceArea";
-import {
-  CrystalStructure,
-  BackgroundEffects
-} from "../components/sections/BackgroundEffect";
-import type { JSX } from "react/jsx-runtime";
+// import {
+//   CrystalStructure,
+//   BackgroundEffects
+// } from "../components/sections/BackgroundEffect";
+// import type { JSX } from "react/jsx-runtime";
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: "About Us", href: "/about" },

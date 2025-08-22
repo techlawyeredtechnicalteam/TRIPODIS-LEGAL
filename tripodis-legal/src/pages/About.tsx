@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Container } from "../components/ui";
+import { Card, Container } from "../components/ui";
 // import {
 //   Users,
 //   Award,
@@ -65,15 +65,6 @@ const AboutUsPage: React.FC = () => {
       // icon: Lightbulb,
       color: "bg-purple-500/20 text-purple-400"
     }
-  ];
-
-  const services = [
-    "Complex Regulation Navigation",
-    "Business Growth Strategy",
-    "Risk Management",
-    "Emerging Opportunity Identification",
-    "Strategic Legal Support",
-    "West African Market Entry"
   ];
 
   return (
