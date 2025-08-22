@@ -12,6 +12,7 @@ const PracticeAreaCard: React.FC<{ area: ServiceArea }> = ({ area }) => {
           src={area.image}
           alt={area.title}
           className="object-cover w-full h-full transition-transform duration-300"
+          loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       </div>

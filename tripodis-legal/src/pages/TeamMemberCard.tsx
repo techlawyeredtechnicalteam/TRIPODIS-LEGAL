@@ -15,6 +15,7 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
           src={member.image}
           alt={member.name}
           className="w-full h-full object-cover object-top"
+          loading="lazy"
         />
       </div>
 

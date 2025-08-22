@@ -32,6 +32,7 @@ const ServiceSection: React.FC = () => {
                   src={service.image}
                   alt={service.title}
                   className="w-full h-32 object-cover"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-semibold text-slate-800 mb-3">
