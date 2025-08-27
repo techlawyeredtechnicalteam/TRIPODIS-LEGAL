@@ -127,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({
             {/* Mobile Menu */}
             <button
               type="button"
-              className="hidden text-gray-800 hover:text-blue-500"
+              className="lg:hidden text-gray-800 hover:text-blue-500"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
