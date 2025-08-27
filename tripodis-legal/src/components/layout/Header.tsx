@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useLocation } from "react-router";
+import { useNavigate } from "react-router";
 import { MdMenu, MdClose } from "react-icons/md";
 import { Button, Container } from "../ui";
 import { NAVIGATION_ITEMS } from "../../utils/constant";
@@ -15,27 +15,27 @@ const Header: React.FC<HeaderProps> = ({
   onContactClick
 }) => {
   const navigate = useNavigate();
-  const location = useLocation();
+  // const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [isScrolled, setIsScrolled] = React.useState(false);
+  // const [isScrolled, setIsScrolled] = React.useState(false);
 
   // Scroll detection effect
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.querySelector("[data-hero-section]");
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setIsScrolled(heroBottom <= 100);
-      } else {
-        setIsScrolled(window.scrollY > 100);
-      }
-    };
+  // React.useEffect(() => {
+  //   const handleScroll = () => {
+  //     const heroSection = document.querySelector("[data-hero-section]");
+  //     if (heroSection) {
+  //       const heroBottom = heroSection.getBoundingClientRect().bottom;
+  //       setIsScrolled(heroBottom <= 100);
+  //     } else {
+  //       setIsScrolled(window.scrollY > 100);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+  //   window.addEventListener("scroll", handleScroll);
+  //   handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
