@@ -1,8 +1,8 @@
 import React from "react";
 import { PRACTICE_AREAS } from "../../utils/constant";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { Container } from "../../components/ui";
-import { FaArrowRight } from "react-icons/fa6";
+// import { FaArrowRight } from "react-icons/fa6";
 import PracticeAreaCard from "../PracticeAreaCard";
 
 interface CorporateLawProps {
@@ -17,9 +17,9 @@ const CorporateLaw: React.FC<CorporateLawProps> = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white pt- lg:pt-24 lg:pb-16">
+    <div className="min-h-screen bg-white pt-24 lg:pt-24 lg:pb-16">
       {/* breadCrumb */}
-      <Container size="full">
+      {/* <Container size="full">
         <div className="flex items-center py-4 text-sm text-gray-600">
           <Link to="/practice-page" className="hover:text-blue-500">
             Practice Area
@@ -27,7 +27,7 @@ const CorporateLaw: React.FC<CorporateLawProps> = () => {
           <FaArrowRight size={16} className="mx-2" />
           <span className="text-gray-900">Corporate Law</span>
         </div>
-      </Container>
+      </Container> */}
 
       <section className="relative">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
@@ -48,7 +48,7 @@ const CorporateLaw: React.FC<CorporateLawProps> = () => {
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
-              <p className="text-gray-700 leading-relaxed mb-4">
+              <p className="text-gray-700 leading-relaxed mb-4 text-justify">
                 At our firm, we provide comprehensive corporate legal services
                 tailored to the needs of each client. We assist with company
                 formation, draft and review corporate agreements, and advise
@@ -65,7 +65,7 @@ const CorporateLaw: React.FC<CorporateLawProps> = () => {
       </section>
 
       {/* Related Practice Areas */}
-      <section className="py-16 bg-gray-50">
+      <section className="py- bg-gray-50">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">

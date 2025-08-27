@@ -7,7 +7,7 @@ const People: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24">
+      <section className="pt-24 lg:pt-24 pb-32">
         <Container size="full">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-8">

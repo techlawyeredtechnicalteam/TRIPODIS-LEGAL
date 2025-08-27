@@ -72,7 +72,7 @@ const AboutUsPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent" />
 
           {/* Logo/Brand Overlay */}
-          <div className="absolute bottom-8 left-8">
+          <div className="hidden lg:absolute bottom-8 left-8">
             <div className="bg-gray-800/10 backdrop-blur-sm border border-gray-800/20 rounded-lg p-4">
               <h2 className="text-2xl font-bold text-black">TRIPODIS LEGAL</h2>
               <p className="text-gray-700 text-sm">Lagos Commercial Center</p>

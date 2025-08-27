@@ -18,8 +18,8 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
   };
 
   return (
-    <section 
-      data-hero-section
+    <section
+      // data-hero-section
       className="relative min-h-screen bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 overflow-hidden"
     >
       {/* slides */}
@@ -53,7 +53,7 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-20 pt-32 sm:pt-48 lg:pt-24 lg:pb-16">
+      <div className="relative z-20 pt-48 sm:pt-48 lg:pt-24 lg:pb-16">
         <Container size="full">
           <div className="max-w-2xl">
             {/* Main Heading */}
