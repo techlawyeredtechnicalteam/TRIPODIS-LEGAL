@@ -87,7 +87,6 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${getBackgroundClasses()}`}
-      style={getBackgroundStyle()}
     >
       <Container size="full">
         <div className="flex items-center justify-between">

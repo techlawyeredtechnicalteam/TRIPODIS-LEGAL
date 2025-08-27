@@ -6,14 +6,14 @@
     background-position: center;
     transition: background-image 0.5s ease-in-out;
   }
-  
+
   .bg-header-gradient {
-    background: linear-gradient(to right, rgba(30,41,59,0.7), rgba(30,41,59,0.3));
+    background: linear-gradient(to right, rgba(30, 41, 59, 0.7), rgba(30, 41, 59, 0.3));
   }
-  
+
   .bg-header-white {
     background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    --backdrop-filter: blur(10px);
     transition: background 0.3s ease-in-out;
   }
 }
