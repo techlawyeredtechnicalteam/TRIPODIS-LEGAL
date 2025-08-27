@@ -21,7 +21,7 @@ const CrystalStructure: React.FC = () => {
         <div className="absolute bottom-0 right-0 w-full h-full">
           {/* Large central crystal */}
           <div className="absolute bottom-16 right-8 sm:right-16 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 transform rotate-12">
-            <div className="w-full h-full bg-gradient-to-br from-blue-300/20 via-teal-400/30 to-cyan-500/20 backdrop-blur-sm border border-white/10 transform rotate-45 shadow-2xl">
+            <div className="w-full h-full bg-gradient-to-br from-blue-300/20 via-blue-400/30 to-cyan-500/20 backdrop-blur-sm border border-white/10 transform rotate-45 shadow-2xl">
               <div className="absolute inset-2 bg-gradient-to-tr from-yellow-300/20 via-pink-300/20 to-purple-400/20 transform -rotate-12"></div>
             </div>
           </div>
@@ -29,7 +29,7 @@ const CrystalStructure: React.FC = () => {
           {/* Additional crystal elements */}
           <div className="absolute bottom-32 right-4 sm:right-8 w-16 h-16 sm:w-24 sm:h-24 transform -rotate-12">
             <div className="w-full h-full bg-gradient-to-br from-blue-300/25 via-indigo-400/30 to-purple-500/25 backdrop-blur-sm border border-white/10 transform rotate-45 shadow-xl">
-              <div className="absolute inset-1 bg-gradient-to-tr from-blue-300/25 via-blue-300/25 to-teal-400/25 transform rotate-12"></div>
+              <div className="absolute inset-1 bg-gradient-to-tr from-blue-300/25 via-blue-300/25 to-blue-400/25 transform rotate-12"></div>
             </div>
           </div>
 

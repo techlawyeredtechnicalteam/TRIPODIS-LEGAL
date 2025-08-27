@@ -18,42 +18,48 @@ export const PRACTICE_AREAS: ServiceArea[] = [
     id: "1",
     title: "Corporate Law",
     description: "Comprehensive legal services for businesses of all sizes.",
-    image: "/corporate.jpg"
+    image: "/corporate.jpg",
+    href: "/corporate-law"
   },
   {
     id: "2",
     title: "Property Law",
     description:
       "Property transactions, development, and real estate litigation.",
-    image: "/property.jpg"
+    image: "/property.jpg",
+    href: "/property-law"
   },
   {
     id: "3",
     title: "Litigation",
     description:
       "Property transactions, development, and real estate litigation.",
-    image: "/litigation.jpg"
+    image: "/litigation.jpg",
+    href: "/litigation"
   },
   {
     id: "4",
     title: "Sports Law",
     description:
       "Property transactions, development, and real estate litigation.",
-    image: "/sports.jpg"
+    image: "/sports.jpg",
+    href: "/sport-law"
   },
   {
     id: "5",
     title: "Entertainment Law",
     description:
       "Property transactions, development, and real estate litigation.",
-    image: "/entertainment.jpg"
+    image: "/entertainment.jpg",
+    href: "/entertainment-law"
   },
   {
     id: "6",
     title: "Criminal Law",
     description:
       "Property transactions, development, and real estate litigation.",
-    image: "/criminal.jpg"
+    image: "/criminal.jpg",
+    href: "/criminal-law"
   }
 ];
 

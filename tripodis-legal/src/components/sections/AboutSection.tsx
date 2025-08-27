@@ -27,7 +27,7 @@ const AboutSection: React.FC = () => {
             <div className="bg-gradient-to-br from-blue-100 to-slate-200 rounded-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <h3 className="text-xl font-semibold text-slate-800 mb-4">
-                  Our vlaue
+                  Our Value
                 </h3>
                 <p className="text-gray-600">
                   Excellence, professionalism, and ethical practice drive

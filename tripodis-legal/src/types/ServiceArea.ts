@@ -3,6 +3,6 @@ export interface ServiceArea {
   title: string;
   description: string;
   image: string;
-  // href: string;
+  href: string;
   // className: string;
 }

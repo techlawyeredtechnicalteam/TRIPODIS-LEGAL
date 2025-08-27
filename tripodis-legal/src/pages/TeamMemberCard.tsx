@@ -51,15 +51,17 @@ const TeamMemberCard: React.FC<{ member: TeamMember }> = ({ member }) => {
           </div>
 
           {/* Profile BTN */}
-          <Button
-            variant="ghost"
-            size="sm"
-            icon={FaArrowRight}
-            iconPosition="right"
-            className="text-sm"
-          >
-            View Profile
-          </Button>
+          <Link to={`/team/${member.id}`}>
+            <Button
+              variant="ghost"
+              size="sm"
+              icon={FaArrowRight}
+              iconPosition="right"
+              className="text-sm"
+            >
+              View Profile
+            </Button>
+          </Link>
         </div>
       </div>
     </Card>

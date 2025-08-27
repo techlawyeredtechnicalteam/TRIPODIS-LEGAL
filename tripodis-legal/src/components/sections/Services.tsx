@@ -1,9 +1,15 @@
 //
 import React from "react";
+import { useNavigate } from "react-router";
 import { PRACTICE_AREAS } from "../../utils/constant";
 import { Badge, Card, Container } from "../ui";
 
 const ServiceSection: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (href: string) => {
+    navigate(href);
+  };
   return (
     <section className="py-16 sm:py-24 bg-white">
       <Container>
@@ -24,17 +30,21 @@ const ServiceSection: React.FC = () => {
           {PRACTICE_AREAS.slice(0, 4).map((service, index) => (
             <Card
               key={index}
-              className="p-6 bg-white border border-slate-200 hover:shadow-xl transition-all duration-300"
+              className="p-6 bg-white border border-slate-200 hover:shadow-xl transition-all duration-300 cursor-pointer"
               hover
             >
-              <div className="mb-4">
+              <button
+                type="button"
+                onClick={() => handleClick(service.href)}
+                className="mb-4 w-full"
+              >
                 <img
                   src={service.image}
                   alt={service.title}
                   className="w-full h-32 object-cover"
                   loading="lazy"
                 />
-              </div>
+              </button>
               <h3 className="text-xl font-semibold text-slate-800 mb-3">
                 {service.title}
               </h3>

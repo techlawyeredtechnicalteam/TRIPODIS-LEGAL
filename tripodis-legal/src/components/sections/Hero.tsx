@@ -3,19 +3,12 @@ import { Button, Container } from "../ui";
 import { sliderImages } from "../../utils/constant";
 
 interface HeroProps {
+  current: number;
+  setCurrent: React.Dispatch<React.SetStateAction<number>>;
   onBookConsultation?: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ onBookConsultation }) => {
-  const [current, setCurrent] = React.useState(0);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % sliderImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
+const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
   const handleBookConsultation = () => {
     if (onBookConsultation) {
       onBookConsultation();
@@ -25,39 +18,53 @@ const Hero: React.FC<HeroProps> = ({ onBookConsultation }) => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 overflow-hidden">
+    <section 
+      data-hero-section
+      className="relative min-h-screen bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 overflow-hidden"
+    >
       {/* slides */}
-      {sliderImages.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-3000 ${
-            current === index ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
-        >
-          {slide.type === "effect" ? (
-            <div className="w-full h-full">
-              {Array.isArray(slide.content)
-                ? slide.content.map((Component, idx) => <Component key={idx} />)
-                : slide.content}
-            </div>
-          ) : (
-            <img
-              src={slide.src}
-              alt={slide.alt}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          )}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent" />
-        </div>
-      ))}
+      <div className="absolute inset-0 w-full h-full">
+        {sliderImages.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-3000 ${
+              current === index ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
+            {slide.type === "effect" ? (
+              <div className="w-full h-full">
+                {Array.isArray(slide.content)
+                  ? slide.content.map((Component, idx) => (
+                      <Component key={idx} />
+                    ))
+                  : slide.content}
+              </div>
+            ) : (
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent" />
+          </div>
+        ))}
+      </div>
 
       {/* Main Content */}
-      <div className="relative z-20 pt-8 sm:pt-16 lg:pt-24 pb-16">
+      <div className="relative z-20 pt-32 sm:pt-48 lg:pt-24 lg:pb-16">
         <Container size="full">
           <div className="max-w-2xl">
             {/* Main Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight mb-6 sm:mb-8">
+            <div className="block sm:hidden mb-6 sm:mb-8">
+              <div className="bg-slate-300/30 backdrop-blur-md rounded-xl px-4 py-2 text-center shadow-lg">
+                <span className="text-sm font-semibold text-white tracking-wide">
+                  Excellence, Professionalism and Innovation
+                </span>
+              </div>
+            </div>
+            <h1 className="hidden sm:block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight mb-6 sm:mb-8">
               Helping Clients Move Forward With Clarity And Confidence.
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 sm:mb-12 leading-relaxed max-w-xl">

@@ -2,16 +2,26 @@ import React from "react";
 import { Outlet } from "react-router";
 import Header from "./Header";
 import Footer from "./Footer";
+import { sliderImages } from "../../utils/constant";
 
 const Layout: React.FC = () => {
+  const [current, setCurrent] = React.useState(0);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % sliderImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <div>
-      <Header />
+    <>
+      <Header bgImage={sliderImages[current].src} current={current} />
       <main>
-        <Outlet />
+        <Outlet context={{ current, setCurrent }} />
       </main>
       <Footer />
-    </div>
+    </>
   );
 };
 export default Layout;
