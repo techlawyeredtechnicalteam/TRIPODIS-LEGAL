@@ -107,9 +107,7 @@ const Header: React.FC<HeaderProps> = ({
                   className={`transition-colors text-xl font-medium ${
                     isActive(nav.href)
                       ? "text-blue-500"
-                      : isScrolled || location.pathname !== "/"
-                      ? "text-gray-800 hover:text-blue-500"
-                      : "text-white hover:text-blue-300"
+                      : "text-gray-800 hover:text-blue-500"
                   }`}
                 >
                   {nav.label}
@@ -129,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({
             {/* Mobile Menu */}
             <button
               type="button"
-              className="text-gray-800 hover:text-blue-500"
+              className="hidden text-gray-800 hover:text-blue-500"
               onClick={toggleMenu}
               aria-label="Toggle Menu"
             >
