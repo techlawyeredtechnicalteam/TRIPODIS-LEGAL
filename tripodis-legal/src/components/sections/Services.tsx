@@ -49,26 +49,23 @@ const ServiceSection: React.FC = () => {
             <motion.div key={index} variants={ServicesAnimation.cardVariants}>
               <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100 h-full">
                 {/* Image Container */}
-                <div className="relative h-64 overflow-hidden">
-                  <motion.img
-                    src={service.image}
-                    alt={service.title}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    initial={{ scale: 1, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                </div>
+                <Link to={`/${service.href}`}>
+                  <div className="relative h-64 overflow-hidden">
+                    <motion.img
+                      src={service.image}
+                      alt={service.title}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      initial={{ scale: 1, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ duration: 0.8, ease: "easeOut" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                  </div>
 
-                {/* Content */}
-                <div className="p-8">
-                  <Link
-                    to={`/${service.href}`}
-                    className="inline-flex items-center group/link"
-                  >
+                  {/* Content */}
+                  <div className="p-8">
                     <motion.h3
                       className="text-2xl font-bold text-gray-900 mb-4"
                       initial={{ opacity: 0 }}
@@ -77,8 +74,8 @@ const ServiceSection: React.FC = () => {
                     >
                       {service.title}
                     </motion.h3>
-                  </Link>
-                </div>
+                  </div>
+                </Link>
               </Card>
             </motion.div>
           ))}
