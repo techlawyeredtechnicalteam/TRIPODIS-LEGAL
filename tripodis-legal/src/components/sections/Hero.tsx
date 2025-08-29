@@ -1,5 +1,7 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Button, Container } from "../ui";
+import { HeroAnimation } from "../animation/HeroAnimation";
 import { sliderImages } from "../../utils/constant";
 
 interface HeroProps {
@@ -18,74 +20,92 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
   };
 
   return (
-    <section
-      // data-hero-section
-      className="relative min-h-screen bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 overflow-hidden"
-    >
+    <div className="relative h-screen overflow-hidden">
       {/* slides */}
-      <div className="absolute inset-0 w-full h-full">
-        {sliderImages.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-3000 ${
-              current === index ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
-          >
-            {slide.type === "effect" ? (
-              <div className="w-full h-full">
-                {Array.isArray(slide.content)
-                  ? slide.content.map((Component, idx) => (
-                      <Component key={idx} />
-                    ))
-                  : slide.content}
-              </div>
-            ) : (
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <div
+          className="flex w-full h-full transition-transform duration-1000 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {sliderImages.map((slide, index) => (
+            <motion.div
+              key={index}
+              className="w-full h-full flex-shrink-0 relative"
+              initial={
+                index === current
+                  ? HeroAnimation.slideAnimation.initial
+                  : undefined
+              }
+              animate={
+                index === current
+                  ? HeroAnimation.slideAnimation.animate
+                  : undefined
+              }
+            >
               <img
                 src={slide.src}
                 alt={slide.alt}
-                className="w-full h-full object-cover"
                 loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover object-center"
               />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent" />
-          </div>
-        ))}
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-black/50 bg-opacity-40"></div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-
       {/* Main Content */}
-      <div className="relative z-20 pt-48 sm:pt-48 lg:pt-24 lg:pb-16">
+      <div className="relative z-10 h-full flex items-center">
         <Container size="full">
-          <div className="max-w-2xl">
+          <motion.div
+            variants={HeroAnimation.staggerContainer}
+            initial="initial"
+            animate="animate"
+            className="max-w-4xl mx-auto text-center text-white"
+          >
             {/* Main Heading */}
-            <div className="block sm:hidden mb-6 sm:mb-8">
-              <div className="bg-slate-300/30 backdrop-blur-md rounded-xl px-4 py-2 text-center shadow-lg">
-                <span className="text-sm font-semibold text-white tracking-wide">
-                  Excellence, Professionalism and Innovation
-                </span>
-              </div>
-            </div>
-            <h1 className="hidden sm:block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-light text-white leading-tight mb-6 sm:mb-8">
+            <motion.div variants={HeroAnimation.fadeInUp} className="mb-6">
+              <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-4 block md:hidden">
+                Excellence, Professionalism and Innovation
+              </h1>
+            </motion.div>
+
+            <motion.h2
+              variants={HeroAnimation.fadeInUp}
+              className="text-lg md:text-2xl font-semibold mb-6 hidden sm:block"
+            >
               Helping Clients Move Forward With Clarity And Confidence.
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-200 mb-8 sm:mb-12 leading-relaxed max-w-xl">
+            </motion.h2>
+
+            <motion.p
+              variants={HeroAnimation.fadeInUp}
+              className="text-base md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed"
+            >
               Provide Clients with innovative and functional legal support that
               is firmly rooted in thorough understanding of the applicable legal
               issues
-            </p>
+            </motion.p>
 
             {/* CTA Button */}
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={handleBookConsultation}
-              className="transform hover:scale-105 transition-all duration-200"
-            >
-              Book Consultation
-            </Button>
-          </div>
+            <motion.div variants={HeroAnimation.fadeInUp}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <Button
+                  onClick={handleBookConsultation}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
+                >
+                  Book Consultation
+                </Button>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </Container>
       </div>
-    </section>
+    </div>
   );
 };
 export default Hero;

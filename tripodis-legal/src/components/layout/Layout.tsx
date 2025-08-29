@@ -16,7 +16,7 @@ const Layout: React.FC = () => {
 
   return (
     <>
-      <Header bgImage={sliderImages[current].src} />
+      <Header />
       <main>
         <Outlet context={{ current, setCurrent }} />
       </main>

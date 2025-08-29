@@ -1,34 +1,12 @@
 import React from "react";
-import { PRACTICE_AREAS } from "../../utils/constant";
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 import { Container } from "../../components/ui";
-// import { FaArrowRight } from "react-icons/fa6";
 import PracticeAreaCard from "../PracticeAreaCard";
+import { PRACTICE_AREAS } from "../../utils/constant";
 
-interface CorporateLawProps {
-  handleClick?: () => void;
-}
-
-const CorporateLaw: React.FC<CorporateLawProps> = () => {
-  const navigate = useNavigate();
-
-  const handlePracticeAreaClick = (area: (typeof PRACTICE_AREAS)[0]) => {
-    navigate(area.href);
-  };
-
+const CorporateLaw: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white pt-24 lg:pt-24 lg:pb-16">
-      {/* breadCrumb */}
-      {/* <Container size="full">
-        <div className="flex items-center py-4 text-sm text-gray-600">
-          <Link to="/practice-page" className="hover:text-blue-500">
-            Practice Area
-          </Link>
-          <FaArrowRight size={16} className="mx-2" />
-          <span className="text-gray-900">Corporate Law</span>
-        </div>
-      </Container> */}
-
+    <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
           {/* Image side */}
@@ -44,7 +22,7 @@ const CorporateLaw: React.FC<CorporateLawProps> = () => {
           {/* Content Side */}
           <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Corporate Law
+              Corporate and Commercial Law
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
@@ -65,7 +43,7 @@ const CorporateLaw: React.FC<CorporateLawProps> = () => {
       </section>
 
       {/* Related Practice Areas */}
-      <section className="py- bg-gray-50">
+      <section className="py-8 bg-gray-50">
         <Container>
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -75,12 +53,9 @@ const CorporateLaw: React.FC<CorporateLawProps> = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PRACTICE_AREAS.slice(1, 4).map((area, index) => (
-              <div key={index} className="cursor-pointer">
-                <PracticeAreaCard
-                  area={area}
-                  handleClick={() => handlePracticeAreaClick(area)}
-                />
-              </div>
+              <Link to={`/${area.href}`} key={index} className="cursor-pointer">
+                <PracticeAreaCard area={area} />
+              </Link>
             ))}
           </div>
         </Container>

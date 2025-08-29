@@ -2,19 +2,13 @@ import React from "react";
 import { Container } from "../components/ui";
 import { PRACTICE_AREAS } from "../utils/constant";
 import PracticeAreaCard from "./PracticeAreaCard";
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 
 const PracticeAreaPage: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handleClick = (href: string) => {
-    navigate(href);
-  };
-
   return (
-    <div className="min-h-screen">
+    <div className="pt-24 lg:pt-24">
       {/* Hero Section */}
-      <section className="pt-24 lg:pt-24 pb-32">
+      <section>
         <Container size="full">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-8">
@@ -33,11 +27,9 @@ const PracticeAreaPage: React.FC = () => {
         <Container size="full">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {PRACTICE_AREAS.map((area) => (
-              <PracticeAreaCard
-                key={area.id}
-                area={area}
-                handleClick={() => handleClick(area.href)}
-              />
+              <Link to={`/${area.href}`}>
+                <PracticeAreaCard key={area.id} area={area} />
+              </Link>
             ))}
           </div>
         </Container>

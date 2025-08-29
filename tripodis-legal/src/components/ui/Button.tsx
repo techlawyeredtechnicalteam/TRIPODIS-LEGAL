@@ -49,7 +49,9 @@ export const Button: React.FC<ButtonProps> = ({
     >
       {Icon && iconPosition === "left" && <Icon className="mr-2 h-4 w-4" />}
       {children}
-      {Icon && iconPosition === "right" && <Icon className="ml-2 h-4 w-4" />}
+      {Icon && iconPosition === "right" && (
+        <Icon className="ml-2 h-4 w-4 hover:translate-x-1 transition-transform duration-200" />
+      )}
     </button>
   );
 };

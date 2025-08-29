@@ -1,30 +1,12 @@
 import React from "react";
 import { PRACTICE_AREAS } from "../../utils/constant";
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 import { Container } from "../../components/ui";
-// import { FaArrowRight } from "react-icons/fa6";
 import PracticeAreaCard from "../PracticeAreaCard";
 
 const PropertyLaw: React.FC = () => {
-  const navigate = useNavigate();
-
-  const handlePracticeAreaClick = (area: (typeof PRACTICE_AREAS)[0]) => {
-    navigate(area.href);
-  };
-
   return (
-    <div className="min-h-screen bg-white pt-24 lg:pt-24 lg:pb-16">
-      {/* breadCrumb */}
-      {/* <Container size="full">
-        <div className="flex items-center py-4 text-sm text-gray-600">
-          <Link to="/practice-page" className="hover:text-blue-500">
-            Practice Area
-          </Link>
-          <FaArrowRight size={16} className="mx-2" />
-          <span className="text-gray-900">Property Law</span>
-        </div>
-      </Container> */}
-
+    <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
           {/* Image side */}
@@ -70,12 +52,9 @@ const PropertyLaw: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {PRACTICE_AREAS.slice(2, 5).map((area, index) => (
-              <div key={index} className="cursor-pointer">
-                <PracticeAreaCard
-                  area={area}
-                  handleClick={() => handlePracticeAreaClick(area)}
-                />
-              </div>
+              <Link to={`/${area.href}`} key={index} className="cursor-pointer">
+                <PracticeAreaCard area={area} />
+              </Link>
             ))}
           </div>
         </Container>

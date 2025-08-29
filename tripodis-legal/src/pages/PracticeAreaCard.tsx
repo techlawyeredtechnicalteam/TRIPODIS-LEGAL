@@ -1,44 +1,34 @@
 import React from "react";
 import { Card } from "../components/ui";
 import type { ServiceArea } from "../types/ServiceArea";
-// import { PRACTICE_AREAS } from "../utils/constant";
 
 interface PracticeAreaCardProps {
   area: ServiceArea;
-  handleClick?: () => void;
 }
 
-const PracticeAreaCard: React.FC<PracticeAreaCardProps> = ({
-  area,
-  handleClick
-}) => {
+const PracticeAreaCard: React.FC<PracticeAreaCardProps> = ({ area }) => {
   return (
-    <button
-      type="button"
-      onClick={handleClick}
-      className="w-full text-left group cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-lg"
-    >
-      <Card className="overflow-hidden hover:shadow-xl transition-all duration-300">
-        {/* Image Container */}
-        <div className="relative h-48 lg:h-72 overflow-hidden">
-          <img
-            src={area.image}
-            alt={area.title}
-            className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        </div>
+    <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100">
+      {/* Image Container */}
+      <div className="relative h-48 lg:h-72 overflow-hidden">
+        <img
+          src={area.image}
+          alt={area.title}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+      </div>
 
-        {/* Content */}
-        <div className="p-6">
-          <h3 className="text-xl lg:text-2xl font-semibold text-gray-600 mb-3 group-hover:text-blue-600 transition-colors">
-            {area.title}
-          </h3>
-          {/* <p className="text-gray-400 mb-4 leading-relaxed">{area.description}</p> */}
-        </div>
-      </Card>
-    </button>
+      {/* Content */}
+      <div className="p-6">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h3>
+      </div>
+
+      {/* Hover Accent */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+    </Card>
   );
 };
 export default PracticeAreaCard;

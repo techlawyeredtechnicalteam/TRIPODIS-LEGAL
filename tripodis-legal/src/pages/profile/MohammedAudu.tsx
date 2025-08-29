@@ -7,9 +7,6 @@ const MohammedAudu: React.FC = () => {
   const tabs = [
     "About",
     "Professional Affiliations"
-    // "Publications",
-    // "Notable Transactions",
-    // "Awards"
   ];
 
   const practiceAreas = ["Sports", "Entertainment"];
@@ -122,34 +119,7 @@ const MohammedAudu: React.FC = () => {
                 </p>
               </div>
             </div>
-          )}
-
-          {/* {activeTab === "Qualification" && (
-            <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                Qualification
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-600">Master of Arts (M.A) Degree</p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-600">
-                    International Executive Postgraduate Diploma (IEPGD) with
-                    distinction
-                  </p>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <p className="text-gray-600">
-                    Called to the Nigerian Bar (1993)
-                  </p>
-                </div>
-              </div>
-            </div>
-          )} */}
+          )}         
 
           {activeTab === "Professional Affiliations" && (
             <div>

@@ -2,10 +2,10 @@
 import type { NavItem } from "../types/NavItem";
 import type { TeamMember } from "../types/People";
 import type { ServiceArea } from "../types/ServiceArea";
-import {
-  CrystalStructure,
-  BackgroundEffects
-} from "../components/sections/BackgroundEffect";
+// import {
+//   CrystalStructure,
+//   BackgroundEffects
+// } from "../components/sections/BackgroundEffect";
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: "About Us", href: "/about" },
@@ -16,50 +16,33 @@ export const NAVIGATION_ITEMS: NavItem[] = [
 export const PRACTICE_AREAS: ServiceArea[] = [
   {
     id: "1",
-    title: "Corporate Law",
-    description: "Comprehensive legal services for businesses of all sizes.",
+    title: "Corporate and Commercial Law",
     image: "/corporate.jpg",
-    href: "/corporate-law"
+    href: "corporate and commercial-law"
   },
   {
     id: "2",
     title: "Property Law",
-    description:
-      "Property transactions, development, and real estate litigation.",
     image: "/property.jpg",
-    href: "/property-law"
+    href: "property-law"
   },
   {
     id: "3",
-    title: "Litigation",
-    description:
-      "Property transactions, development, and real estate litigation.",
-    image: "/litigation.jpg",
-    href: "/litigation"
+    title: "Sports Law",
+    image: "/sports.jpg",
+    href: "sport-law"
   },
   {
     id: "4",
-    title: "Sports Law",
-    description:
-      "Property transactions, development, and real estate litigation.",
-    image: "/sports.jpg",
-    href: "/sport-law"
+    title: "Entertainment Law",
+    image: "/entertainment.jpg",
+    href: "entertainment-law"
   },
   {
     id: "5",
-    title: "Entertainment Law",
-    description:
-      "Property transactions, development, and real estate litigation.",
-    image: "/entertainment.jpg",
-    href: "/entertainment-law"
-  },
-  {
-    id: "6",
-    title: "Criminal Law",
-    description:
-      "Property transactions, development, and real estate litigation.",
-    image: "/criminal.jpg",
-    href: "/criminal-law"
+    title: "Litigation",
+    image: "/litigation.jpg",
+    href: "litigation"
   }
 ];
 
@@ -79,49 +62,41 @@ export const teamMembers: TeamMember[] = [
     name: "Muhammed K. Audu",
     position: "Partner",
     image: "/Kameel Audu.jpg",
-    email: "kameel@tripodis.com",
-    linkedin: "#"
+    href: "Muhammed K. Audu"
   },
   {
     id: "2",
     name: "Gabriel Ileanwa Peter",
     position: "Partner",
     image: "/Ileanwa Peter.jpg",
-    email: "peter@tripodis.com",
-    linkedin: "#"
+    href: "Gabriel Ileanwa Peter"
   },
   {
     id: "3",
     name: "Nurudeen Abimaje",
     position: "Partner",
     image: "/Nurudeen Abimaje.jpg",
-    email: "Nurudeen@tripodis.com",
-    linkedin: "#"
+    href: "Nurudeen Abimaje"
   },
   {
     id: "4",
     name: "Ebuka Stanley Emechebe",
     position: "Partner",
-    image: "/Ebuka Emechebe.jpg",
-    email: "Ebuka@tripodis.com",
-    linkedin: "#"
+    image: "/Ebuka Emechebe.jpg"
   }
 ];
 
 export const sliderImages = [
-  // First slide: BackgroundEffect
   {
-    type: "effect",
-    content: [BackgroundEffects, CrystalStructure]
+    src: "/hero-bg4.jpg",
+    alt: "Hero Image 1"
   },
   {
-    type: "image",
-    src: "/corporate.jpg",
-    alt: "Business Meeting"
+    src: "/hero-bg5.jpg",
+    alt: "Hero Image 2"
   },
   {
-    type: "image",
-    src: "/lagos.jpg",
-    alt: "Lagos Skyline"
+    src: "/hero-bg3.jpg",
+    alt: "Hero Image 3"
   }
 ];
