@@ -61,7 +61,7 @@ const AboutSection: React.FC = () => {
                   variants={AboutSectionAnimation.itemVariants}
                   className="text-gray-600"
                 >
-                  Excellence, professionalism, and ethical practice drive
+                  Excellence, Professionalism, and Pratical Innovation drive
                   everything we do at Tripodis Legal.
                 </motion.p>
               </motion.div>

@@ -12,7 +12,7 @@ const PropertyLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/property.jpg"
+              src="/property.webp"
               alt="Property Law"
               className="object-cover w-full h-full"
             />

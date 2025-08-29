@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({
           <div className="flex items-center shrink-0 p-8">
             <button type="button" onClick={() => handleNavClick("/")}>
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Tripodis Legal Logo"
                 className="h-auto w-40 object-cover"
               />

@@ -17,31 +17,31 @@ export const PRACTICE_AREAS: ServiceArea[] = [
   {
     id: "1",
     title: "Corporate and Commercial Law",
-    image: "/corporate.jpg",
+    image: "/corporate.webp",
     href: "corporate and commercial-law"
   },
   {
     id: "2",
     title: "Property Law",
-    image: "/property.jpg",
+    image: "/property.webp",
     href: "property-law"
   },
   {
     id: "3",
     title: "Sports Law",
-    image: "/sports.jpg",
+    image: "/sports.webp",
     href: "sport-law"
   },
   {
     id: "4",
     title: "Entertainment Law",
-    image: "/entertainment.jpg",
+    image: "/entertainment.webp",
     href: "entertainment-law"
   },
   {
     id: "5",
     title: "Litigation",
-    image: "/litigation.jpg",
+    image: "/litigation.webp",
     href: "litigation"
   }
 ];
@@ -61,42 +61,38 @@ export const teamMembers: TeamMember[] = [
     id: "1",
     name: "Muhammed K. Audu",
     position: "Partner",
-    image: "/Kameel Audu.jpg",
+    image: "/Kameel Audu.webp",
     href: "Muhammed K. Audu"
   },
   {
     id: "2",
     name: "Gabriel Ileanwa Peter",
     position: "Partner",
-    image: "/Ileanwa Peter.jpg",
+    image: "/Ileanwa Peter.webp",
     href: "Gabriel Ileanwa Peter"
   },
   {
     id: "3",
     name: "Nurudeen Abimaje",
     position: "Partner",
-    image: "/Nurudeen Abimaje.jpg",
+    image: "/Nurudeen Abimaje.webp",
     href: "Nurudeen Abimaje"
   },
   {
     id: "4",
     name: "Ebuka Stanley Emechebe",
     position: "Partner",
-    image: "/Ebuka Emechebe.jpg"
+    image: "/Ebuka Emechebe.webp"
   }
 ];
 
 export const sliderImages = [
   {
-    src: "/hero-bg4.jpg",
+    src: "/hero-bg1.jpg",
     alt: "Hero Image 1"
   },
   {
-    src: "/hero-bg5.jpg",
+    src: "/hero-bg2.jpg",
     alt: "Hero Image 2"
-  },
-  {
-    src: "/hero-bg3.jpg",
-    alt: "Hero Image 3"
   }
 ];

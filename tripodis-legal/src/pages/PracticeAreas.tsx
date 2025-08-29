@@ -1,40 +1,65 @@
 import React from "react";
-import { Container } from "../components/ui";
-import { PRACTICE_AREAS } from "../utils/constant";
-import PracticeAreaCard from "./PracticeAreaCard";
 import { Link } from "react-router";
+import { motion } from "framer-motion";
+import { Container } from "../components/ui";
+import PracticeAreaCard from "./PracticeAreaCard";
+import { PRACTICE_AREAS } from "../utils/constant";
+import { ServicesAnimation } from "../components/animation/ServiceAnimation";
 
 const PracticeAreaPage: React.FC = () => {
   return (
-    <div className="pt-24 lg:pt-24">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      className="pt-24 lg:pt-24"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={ServicesAnimation.containerVariants}
+    >
       {/* Hero Section */}
       <section>
         <Container size="full">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-8">
+          <motion.div
+            variants={ServicesAnimation.containerVariants}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <motion.h1
+              variants={ServicesAnimation.headerItemVariants}
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-8"
+            >
               Practice Areas
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-800 leading-relaxed">
+            </motion.h1>
+            <motion.p
+              variants={ServicesAnimation.headerItemVariants}
+              className="text-lg sm:text-xl text-gray-800 leading-relaxed"
+            >
               We provide a full range of specialized legal and business advisory
               services in various areas of the law.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </Container>
       </section>
 
       {/* Practice Areas Grid */}
-      <section className="py-16 lg:py-20">
-        <Container size="full">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <motion.section
+        variants={ServicesAnimation.gridVariants}
+        className="py-16 lg:py-20"
+      >
+        <Container size="xl">
+          <motion.div
+            variants={ServicesAnimation.gridVariants}
+            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+          >
             {PRACTICE_AREAS.map((area) => (
-              <Link to={`/${area.href}`}>
-                <PracticeAreaCard key={area.id} area={area} />
-              </Link>
+              <motion.div variants={ServicesAnimation.cardVariants}>
+                <Link to={`/${area.href}`}>
+                  <PracticeAreaCard key={area.id} area={area} />
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </Container>
-      </section>
-    </div>
+      </motion.section>
+    </motion.div>
   );
 };
 

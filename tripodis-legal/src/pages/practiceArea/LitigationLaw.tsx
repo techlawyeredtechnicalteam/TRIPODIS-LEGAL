@@ -12,7 +12,7 @@ const LitigationLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/litigation.jpg"
+              src="/litigation.webp"
               alt="Litigation Law"
               className="object-cover w-full h-full"
             />

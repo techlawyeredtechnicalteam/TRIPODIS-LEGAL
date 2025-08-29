@@ -12,7 +12,7 @@ const SportLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/sports.jpg"
+              src="/sports.webp"
               alt="Sport Law"
               className="object-cover w-full h-full"
             />

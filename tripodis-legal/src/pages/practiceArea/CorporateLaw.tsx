@@ -12,7 +12,7 @@ const CorporateLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/corporate.jpg"
+              src="/corporate.webp"
               alt="Corporate Law"
               className="object-cover w-full h-full"
             />

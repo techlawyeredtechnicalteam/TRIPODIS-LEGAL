@@ -8,7 +8,7 @@ interface PracticeAreaCardProps {
 
 const PracticeAreaCard: React.FC<PracticeAreaCardProps> = ({ area }) => {
   return (
-    <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100">
+    <Card className="group relative overflow-hidden h-full flex-1">
       {/* Image Container */}
       <div className="relative h-48 lg:h-72 overflow-hidden">
         <img

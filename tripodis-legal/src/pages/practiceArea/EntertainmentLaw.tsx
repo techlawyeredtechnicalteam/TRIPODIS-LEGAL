@@ -12,7 +12,7 @@ const EntertainmentLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/entertainment.jpg"
+              src="/entertainment.webp"
               alt="Entertainment Law"
               className="object-cover w-full h-full"
             />

@@ -1,13 +1,13 @@
 import React from "react";
-import { motion, useReducedMotion } from "framer-motion";
-import { Card, Container } from "../components/ui";
-import { TbTargetArrow } from "react-icons/tb";
 import { CiUser } from "react-icons/ci";
-import { PiScales, PiLightbulbThin } from "react-icons/pi";
 import { FiAward } from "react-icons/fi";
 import { MdShield } from "react-icons/md";
+import { TbTargetArrow } from "react-icons/tb";
+import { Card, Container } from "../components/ui";
+import { motion, useReducedMotion } from "framer-motion";
+import { PiScales, PiLightbulbThin } from "react-icons/pi";
 
-// Performance-optimized animation variants
+// animation variants
 const fadeInUpVariants = {
   hidden: {
     opacity: 0,
@@ -157,10 +157,10 @@ const AboutUsPage: React.FC = () => {
       <section className="min-h-[70vh] lg:min-h-[80vh] pt-16 flex flex-col lg:flex-row overflow-hidden">
         {/* Left Side - Image */}
         <motion.div
-          className="lg:w-1/2 h-64 md:h-auto lg:h-auto relative overflow-hidden"
-          initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, scale: 1.1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
+          className="lg:w-1/2 h-64 md:h-auto lg:h-auto relative overflow-hidden"
         >
           <img
             src="/logo-2.jpg"

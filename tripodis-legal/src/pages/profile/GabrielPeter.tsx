@@ -23,7 +23,7 @@ const GabrielPeter: React.FC = () => {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/Ileanwa Peter.jpg"
+                    src="/Ileanwa Peter.webp"
                     alt="Ileanwa Peter"
                     className="w-48 h-64 object-cover rounded-lg shadow-lg mx-auto md:mx-0"
                   />

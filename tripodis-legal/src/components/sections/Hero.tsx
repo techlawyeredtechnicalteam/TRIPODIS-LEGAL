@@ -47,10 +47,9 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
                 alt={slide.alt}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
               />
-              {/* Dark overlay for better text readability */}
-              <div className="absolute inset-0 bg-black/50 bg-opacity-40"></div>
+              <div className="absolute inset-0 bg-black/50 bg-opacity-50"></div>
             </motion.div>
           ))}
         </div>

@@ -4,10 +4,7 @@ import { Container, Card } from "../../components/ui";
 const MohammedAudu: React.FC = () => {
   const [activeTab, setActiveTab] = React.useState("About");
 
-  const tabs = [
-    "About",
-    "Professional Affiliations"
-  ];
+  const tabs = ["About", "Professional Affiliations"];
 
   const practiceAreas = ["Sports", "Entertainment"];
 
@@ -21,7 +18,7 @@ const MohammedAudu: React.FC = () => {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/Kameel Audu.jpg"
+                    src="/Kameel Audu.webp"
                     alt="Mohammed Audu"
                     className="w-48 h-64 object-cover rounded-lg shadow-lg mx-auto md:mx-0"
                   />
@@ -119,7 +116,7 @@ const MohammedAudu: React.FC = () => {
                 </p>
               </div>
             </div>
-          )}         
+          )}
 
           {activeTab === "Professional Affiliations" && (
             <div>

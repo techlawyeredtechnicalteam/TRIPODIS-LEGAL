@@ -6,7 +6,7 @@ import { teamMembers } from "../utils/constant";
 import { Link } from "react-router";
 import type { TeamMember } from "../types/People";
 
-// Performance-optimized animation variants
+//animation
 const fadeInUpVariants = {
   hidden: {
     opacity: 0,
@@ -115,7 +115,7 @@ const buttonVariants = {
   }
 } as const;
 
-// Enhanced TeamMemberCard wrapper with animation
+// TeamMemberCard wrapper with animation
 const AnimatedTeamMemberCard: React.FC<{
   member: TeamMember;
   index: number;
