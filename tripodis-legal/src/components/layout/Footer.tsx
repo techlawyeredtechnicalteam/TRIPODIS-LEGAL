@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
               {[
                 { text: "About Us", to: "/about" },
                 { text: "People", to: "/people" },
-                { text: "Practice Area", to: "/practice-areas" }
+                { text: "Practice Area", to: "/practice-page" }
               ].map((link) => (
                 <motion.li
                   key={link.text}
