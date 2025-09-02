@@ -199,106 +199,49 @@ const AboutUsPage: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              About Us
+              Why Tripodis?
             </motion.h1>
             <motion.p
-              className="text-lg text-gray-800 leading-relaxed mb-6 text-justify"
+              className="text-lg text-gray-800 leading-relaxed mb-4 text-justify"
               variants={slideInRightVariants}
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.2 }}
             >
-              At Tripodis, we approach our vocation to provide legal solutions
-              to clients not as a distinct academic pursuit but as a key
-              component of the business strategy and decision-making process.
-              Our goal is to assist businesses and individuals operating in
-              Nigeria and the West African sub-region in safely navigating the
-              web of legal and regulatory considerations and to better
-              anticipate and maximize opporunities.
+              Tripodis distinguishes itself from other law firms by providing
+              clients with the personal attention and expertise of senior
+              lawyers that are expected in the relevant areas of practice. Our
+              approach to providing our clients with legal advice is innovative
+              and structured to deliver functional, business savvy legal support
+              that is firmly rooted in a thorough understanding of the
+              applicable legal issues.
             </motion.p>
             <motion.p
-              className="text-gray-700 leading-relaxed text-justify"
               variants={slideInRightVariants}
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.4 }}
+              className="text-gray-800 leading-relaxed mb-4 text-justify text-lg"
+            >
+              We adopt a flexible and result oriented approach to billing. Our
+              fees are reflective of the level of expertise and value that we
+              bring to every transaction. We are nevertheless competitive,
+              willing to adopt risk-sharing remuneration and offer flexible
+              billing structures that are negotiated and structured to suit each
+              transaction.
+            </motion.p>
+            <motion.p
+              className="text-blue-500 leading-relaxed text-justify text-lg"
+              variants={slideInRightVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.6 }}
             >
               Our Commitment to Excellence is Unrivaled.
             </motion.p>
           </div>
         </div>
       </section>
-
-      {/* Why Tripodis */}
-      <motion.section
-        className="py-10 lg:py-16"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainerVariants}
-      >
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-            <motion.div variants={slideInLeftVariants}>
-              <motion.p
-                className="text-blue-500 font-medium mb-4"
-                variants={fadeInUpVariants}
-              >
-                Why Tripodis?
-              </motion.p>
-              <motion.h2
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-8"
-                variants={fadeInUpVariants}
-              >
-                Practical Legal Solutions
-              </motion.h2>
-              <motion.div
-                className="flex items-center space-x-4 mb-6"
-                variants={fadeInUpVariants}
-              >
-                <motion.div
-                  className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center"
-                  animate={shouldReduceMotion ? {} : "animate"}
-                >
-                  <TbTargetArrow className="w-6 h-6 text-blue-400" />
-                </motion.div>
-                <div>
-                  <h3 className="text-gray-800 font-semibold">
-                    Strategic Partnership
-                  </h3>
-                  <p className="text-gray-700 text-sm">
-                    Trusted partner for business growth
-                  </p>
-                </div>
-              </motion.div>
-            </motion.div>
-
-            <motion.div className="space-y-6" variants={slideInRightVariants}>
-              <motion.div variants={scaleInVariants}>
-                <Card className="p-6">
-                  <p className="text-gray-800 leading-relaxed mb-4 text-justify">
-                    Tripodis distinguishes itself from other law firms by
-                    providing clients with the personal attention and expertise
-                    of senior lawyers that are expected in the relevant areas of
-                    practice. Our approach to providing our clients with legal
-                    advice is innovative and structured to deliver functional,
-                    business savvy legal support that is firmly rooted in a
-                    thorough understanding of the applicable legal issues.
-                  </p>
-                  <p className="text-gray-800 leading-relaxed mb-4 text-justify">
-                    We adopt a flexible and result oriented approach to billing.
-                    Our fees are reflective of the level of expertise and value
-                    that we bring to every transaction. We are nevertheless
-                    competitive, willing to adopt risk-sharing remuneration and
-                    offer flexible billing structures that are negotiated and
-                    structured to suit each transaction.
-                  </p>
-                </Card>
-              </motion.div>
-            </motion.div>
-          </div>
-        </Container>
-      </motion.section>
 
       {/* Core Values Section */}
       <motion.section
@@ -387,7 +330,7 @@ const AboutUsPage: React.FC = () => {
       </motion.section>
 
       {/* Stats Section */}
-      <motion.section
+      {/* <motion.section
         className="py-10"
         initial="hidden"
         whileInView="visible"
@@ -434,7 +377,7 @@ const AboutUsPage: React.FC = () => {
             })}
           </motion.div>
         </Container>
-      </motion.section>
+      </motion.section> */}
     </div>
   );
 };

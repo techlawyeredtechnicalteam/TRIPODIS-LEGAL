@@ -33,13 +33,13 @@ const AboutSection: React.FC = () => {
               variants={AboutSectionAnimation.itemVariants}
               className="text-lg text-slate-600 mb-6 leading-relaxed text-justify"
             >
-              At Tripodis Legal, we deliver comprehensive legal services
-              designed to meet the dynamic needs of today&apos;s businesses.
-              With our base in the heart of Lagos&apos; commercial center, we
-              are strategically positioned to serve clients with interests
-              across Nigeria and the West African sub-region. Our approach is
-              driven by a commitment to excellence, professionalism, and ethical
-              practice.
+              Tripodis distinguishes itself from other law firms by providing
+              clients with the personal attention and expertise of senior
+              lawyers that are expected in the relevant areas of practice. Our
+              approach to providing our clients with legal advice is innovative
+              and structured to deliver functional, business savvy legal support
+              that is firmly rooted in a thorough understanding of the
+              applicable legal issues.
             </motion.p>
           </div>
           <motion.div
@@ -51,18 +51,17 @@ const AboutSection: React.FC = () => {
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
                 className="bg-white rounded-lg p-6 shadow-lg"
               >
-                <motion.h3
+                {/* <motion.h3
                   variants={AboutSectionAnimation.itemVariants}
                   className="text-xl font-semibold text-slate-800 mb-4"
                 >
                   Our Value
-                </motion.h3>
+                </motion.h3> */}
                 <motion.p
                   variants={AboutSectionAnimation.itemVariants}
-                  className="text-gray-600"
+                  className="text-blue-500"
                 >
-                  Excellence, Professionalism, and Pratical Innovation drive
-                  everything we do at Tripodis Legal.
+                  Our Commitment to Excellence is Unrivaled
                 </motion.p>
               </motion.div>
             </motion.div>
