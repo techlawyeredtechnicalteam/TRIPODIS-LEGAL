@@ -47,10 +47,10 @@ const ServiceSection: React.FC = () => {
         >
           {PRACTICE_AREAS.slice(0, 4).map((service, index) => (
             <motion.div key={index} variants={ServicesAnimation.cardVariants}>
-              <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100 h-full">
+              <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100 h-64">
                 {/* Image Container */}
-                <Link to={`/${service.href}`}>
-                  <div className="relative h-64 overflow-hidden">
+                <Link to={`/${service.href}`} className="block h-full">
+                  <div className="relative h-full overflow-hidden">
                     <motion.img
                       src={service.image}
                       alt={service.title}
@@ -62,18 +62,17 @@ const ServiceSection: React.FC = () => {
                       transition={{ duration: 0.8, ease: "easeOut" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-8">
-                    <motion.h3
-                      className="text-2xl font-bold text-gray-900 mb-4"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                      {service.title}
-                    </motion.h3>
+                    {/* Content */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <motion.h3
+                        className="text-2xl font-bold text-white"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                      >
+                        {service.title}
+                      </motion.h3>
+                    </div>
                   </div>
                 </Link>
               </Card>

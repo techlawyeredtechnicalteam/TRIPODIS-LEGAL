@@ -51,7 +51,7 @@ const PracticeAreaPage: React.FC = () => {
           >
             {PRACTICE_AREAS.map((area) => (
               <motion.div variants={ServicesAnimation.cardVariants}>
-                <Link to={`/${area.href}`}>
+                <Link to={`/${area.href}`} className="block h-full">
                   <PracticeAreaCard key={area.id} area={area} />
                 </Link>
               </motion.div>
