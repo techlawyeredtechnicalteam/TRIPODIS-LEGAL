@@ -13,13 +13,13 @@ export const PRACTICE_AREAS: ServiceArea[] = [
   {
     id: "1",
     title: "Private Equity",
-    image: "/private equity.jpg",
+    image: "/private equity.webp",
     href: "Private Equity"
   },
   {
     id: "2",
     title: "Mergers, Acquisitions and Corporate Restructuring",
-    image: "/corporate-restructuring.jpg",
+    image: "/corporate-restructuring.webp",
     href: "Mergers, Acquisitions and Corporate Restructuring"
   },
   {
@@ -31,19 +31,19 @@ export const PRACTICE_AREAS: ServiceArea[] = [
   {
     id: "4",
     title: "Intellectual Property",
-    image: "/intellectual property.jpg",
+    image: "/intellectual property.webp",
     href: "Intellectual Property"
   },
   {
     id: "5",
     title: "Oil and Gas",
-    image: "/oil-and-gas.jpg",
+    image: "/oil-and-gas.webp",
     href: "Oil and Gas"
   },
   {
     id: "6",
     title: "Commercial Advisory",
-    image: "/commercial-advisory.jpg",
+    image: "/commercial-advisory.webp",
     href: "Commercial Advisory"
   },
   {
@@ -61,13 +61,13 @@ export const PRACTICE_AREAS: ServiceArea[] = [
   {
     id: "9",
     title: "Real Estate",
-    image: "/real estate.jpg",
+    image: "/real estate.webp",
     href: "Real Estate"
   },
   {
     id: "10",
     title: "Banking and Finance",
-    image: "/banking.jpg",
+    image: "/banking.webp",
     href: "Banking and Finance"
   }
 ];

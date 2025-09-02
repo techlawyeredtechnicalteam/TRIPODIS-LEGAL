@@ -12,7 +12,7 @@ const OilandGas: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/oil-and-gas.jpg"
+              src="/oil-and-gas.webp"
               alt="Oil and Gas"
               className="object-cover w-full h-full"
             />

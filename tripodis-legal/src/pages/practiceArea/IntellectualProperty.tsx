@@ -12,7 +12,7 @@ const IntellectualProperty: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/intellectual property.jpg"
+              src="/intellectual property.webp"
               alt="Intellectual Property"
               className="object-cover w-full h-full"
             />

@@ -12,7 +12,7 @@ const BankingandFinance: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/banking.jpg"
+              src="/banking.webp"
               alt="Banking and Finance"
               className="object-cover w-full h-full"
             />
