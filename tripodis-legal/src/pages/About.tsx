@@ -1,11 +1,11 @@
 import React from "react";
-import { CiUser } from "react-icons/ci";
+// import { CiUser } from "react-icons/ci";
 import { FiAward } from "react-icons/fi";
 import { MdShield } from "react-icons/md";
-import { TbTargetArrow } from "react-icons/tb";
+// import { TbTargetArrow } from "react-icons/tb";
 import { Card, Container } from "../components/ui";
 import { motion, useReducedMotion } from "framer-motion";
-import { PiScales, PiLightbulbThin } from "react-icons/pi";
+import { PiLightbulbThin } from "react-icons/pi";
 
 // animation variants
 const fadeInUpVariants = {
@@ -34,21 +34,6 @@ const staggerContainerVariants = {
   }
 } as const;
 
-const slideInLeftVariants = {
-  hidden: {
-    opacity: 0,
-    x: -40
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.7,
-      ease: "easeOut"
-    }
-  }
-} as const;
-
 const slideInRightVariants = {
   hidden: {
     opacity: 0,
@@ -59,21 +44,6 @@ const slideInRightVariants = {
     x: 0,
     transition: {
       duration: 0.7,
-      ease: "easeOut"
-    }
-  }
-} as const;
-
-const scaleInVariants = {
-  hidden: {
-    opacity: 0,
-    scale: 0.9
-  },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
       ease: "easeOut"
     }
   }
@@ -100,32 +70,32 @@ const cardHoverVariants = {
 const AboutUsPage: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
 
-  const stats = [
-    {
-      icon: TbTargetArrow,
-      label: "Strategic Location",
-      value: "Lagos",
-      color: "text-blue-400"
-    },
-    {
-      icon: CiUser,
-      label: "Regional Coverage",
-      value: "West Africa",
-      color: "text-blue-400"
-    },
-    {
-      icon: PiScales,
-      label: "Legal Expertise",
-      value: "Comprehensive",
-      color: "text-blue-400"
-    },
-    {
-      icon: FiAward,
-      label: "Service Focus",
-      value: "Business Growth",
-      color: "text-blue-400"
-    }
-  ];
+  // const stats = [
+  //   {
+  //     icon: TbTargetArrow,
+  //     label: "Strategic Location",
+  //     value: "Lagos",
+  //     color: "text-blue-400"
+  //   },
+  //   {
+  //     icon: CiUser,
+  //     label: "Regional Coverage",
+  //     value: "West Africa",
+  //     color: "text-blue-400"
+  //   },
+  //   {
+  //     icon: PiScales,
+  //     label: "Legal Expertise",
+  //     value: "Comprehensive",
+  //     color: "text-blue-400"
+  //   },
+  //   {
+  //     icon: FiAward,
+  //     label: "Service Focus",
+  //     value: "Business Growth",
+  //     color: "text-blue-400"
+  //   }
+  // ];
 
   const values = [
     {
