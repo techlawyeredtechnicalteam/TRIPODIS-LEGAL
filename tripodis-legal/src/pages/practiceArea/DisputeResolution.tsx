@@ -12,8 +12,8 @@ const DisputeResolution: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/litigation.webp"
-              alt="DisputeResolution"
+              src="/dispute-resolution.webp"
+              alt="Dispute Resolution"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>

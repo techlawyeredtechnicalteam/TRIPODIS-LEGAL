@@ -12,8 +12,8 @@ const RiskManagement: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/property.webp"
-              alt="Property Law"
+              src="/risk.webp"
+              alt="Compliance & Risk Management"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>

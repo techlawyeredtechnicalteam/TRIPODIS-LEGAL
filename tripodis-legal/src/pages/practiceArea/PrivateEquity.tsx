@@ -12,8 +12,8 @@ const PrivateEquity: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/corporate.webp"
-              alt="Corporate Law"
+              src="/private equity.jpg"
+              alt="Private Equity"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>

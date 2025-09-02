@@ -12,8 +12,8 @@ const CommercialAdvisory: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/entertainment.webp"
-              alt="Entertainment Law"
+              src="/commercial-advisory.jpg"
+              alt="Commercial Advisory"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>

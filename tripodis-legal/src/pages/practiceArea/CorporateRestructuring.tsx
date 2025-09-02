@@ -12,8 +12,8 @@ const CorporateRestructuring: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/sports.webp"
-              alt="Sport Law"
+              src="/corporate-restructuring.jpg"
+              alt="Corporate Restructuring"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>
