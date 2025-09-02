@@ -2,10 +2,6 @@
 import type { NavItem } from "../types/NavItem";
 import type { TeamMember } from "../types/People";
 import type { ServiceArea } from "../types/ServiceArea";
-// import {
-//   CrystalStructure,
-//   BackgroundEffects
-// } from "../components/sections/BackgroundEffect";
 
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: "About Us", href: "/about" },
@@ -16,15 +12,15 @@ export const NAVIGATION_ITEMS: NavItem[] = [
 export const PRACTICE_AREAS: ServiceArea[] = [
   {
     id: "1",
-    title: "Corporate and Commercial Law",
+    title: "Private Equity",
     image: "/corporate.webp",
-    href: "corporate and commercial-law"
+    href: "Private Equity"
   },
   {
     id: "2",
-    title: "Property Law",
+    title: "Mergers, Acquisitions and Corporate Restructuring",
     image: "/property.webp",
-    href: "property-law"
+    href: "Mergers, Acquisitions and Corporate Restructuring"
   },
   {
     id: "3",
@@ -34,15 +30,45 @@ export const PRACTICE_AREAS: ServiceArea[] = [
   },
   {
     id: "4",
-    title: "Entertainment Law",
+    title: "Intellectual Property",
     image: "/entertainment.webp",
-    href: "entertainment-law"
+    href: "Intellectual Property"
   },
   {
     id: "5",
-    title: "Litigation",
+    title: "Oil and Gas",
     image: "/litigation.webp",
-    href: "litigation"
+    href: "Oil and Gas"
+  },
+  {
+    id: "6",
+    title: "Commercial Advisory",
+    image: "/litigation.webp",
+    href: "Commercial Advisory"
+  },
+  {
+    id: "7",
+    title: "Compliance & Risk Management",
+    image: "/litigation.webp",
+    href: "Compliance & Risk Management"
+  },
+  {
+    id: "8",
+    title: "Dispute Resolution",
+    image: "/litigation.webp",
+    href: "Dispute Resolution"
+  },
+  {
+    id: "9",
+    title: "Real Estate",
+    image: "/litigation.webp",
+    href: "Real Estate"
+  },
+  {
+    id: "10",
+    title: "Banking and Finance",
+    image: "/litigation.webp",
+    href: "Banking and Finance"
   }
 ];
 
@@ -88,11 +114,11 @@ export const teamMembers: TeamMember[] = [
 
 export const sliderImages = [
   {
-    src: "/hero-bg1.jpg",
+    src: "/hero-bg1.webp",
     alt: "Hero Image 1"
   },
   {
-    src: "/hero-bg2.jpg",
+    src: "/hero-bg2.webp",
     alt: "Hero Image 2"
   }
 ];

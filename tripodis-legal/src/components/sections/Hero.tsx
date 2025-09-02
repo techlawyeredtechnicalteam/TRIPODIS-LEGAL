@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
   };
 
   return (
-    <div className="relative h-screen overflow-hidden">
+    <div className="h-screen overflow-hidden">
       {/* slides */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div

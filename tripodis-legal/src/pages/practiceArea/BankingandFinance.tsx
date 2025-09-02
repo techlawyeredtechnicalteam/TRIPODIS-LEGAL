@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Container } from "../../components/ui";
 import PracticeAreaCard from "../PracticeAreaCard";
 
-const SportLaw: React.FC = () => {
+const BankingandFinance: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
@@ -22,20 +22,16 @@ const SportLaw: React.FC = () => {
           {/* Content Side */}
           <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Sport Law
+              Banking and Finance
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
               <p className="text-gray-700 leading-relaxed mb-4 text-justify">
-                Our focus on sports comes with market leading experience with
-                some of our industry-defining transactions and cases in the
-                emerging Nigerian industry and the world at large at FIFA and
-                the international Court of Arbitration for Sports. We have
-                first-hand experience with negotiating key industry documents
-                including talent purchase, connection, operations and
-                maintenance and other agreements. We have developed, ahead of
-                the rest of the market, a compliance matrix for players in the
-                emerging sports industry.
+                Our partners have wide range of experience advising various
+                types of lenders, borrowers and parties involved in different
+                forms of raising capital. We have dealt with some of the largest
+                and most innovative financing structures, covering many
+                industries locally and across the sub-region.
               </p>
             </div>
           </div>
@@ -63,4 +59,4 @@ const SportLaw: React.FC = () => {
     </div>
   );
 };
-export default SportLaw;
+export default BankingandFinance;

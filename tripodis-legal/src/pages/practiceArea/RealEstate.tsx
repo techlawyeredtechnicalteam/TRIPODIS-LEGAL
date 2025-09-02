@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Container } from "../../components/ui";
 import PracticeAreaCard from "../PracticeAreaCard";
 
-const EntertainmentLaw: React.FC = () => {
+const RealEstate: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
@@ -12,8 +12,8 @@ const EntertainmentLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/entertainment.webp"
-              alt="Entertainment Law"
+              src="/sports.webp"
+              alt="Sport Law"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>
@@ -22,20 +22,24 @@ const EntertainmentLaw: React.FC = () => {
           {/* Content Side */}
           <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Entertainment Law
+              Real Estate
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
               <p className="text-gray-700 leading-relaxed mb-4 text-justify">
-                At our firm, we represent artists, producers, record labels,
-                production companies, and media organizations. We draft and
-                negotiate contracts, protect intellectual property rights, and
-                provide guidance on licensing, distribution, and sponsorship
-                deals. Our lawyers also handle disputes involving royalties,
-                ownership, and creative rights. With a clear understanding of
-                the entertainment industry&apos;s dynamics, we help clients
-                protect their work, maximize earnings, and build lasting
-                careers.
+                Our real estate practice is focused on providing value added
+                services to our clients through innovative structures that are
+                as enduring as the underlying assests of the clients we
+                represent. We have extensive experience in various real estate
+                lease arrangements inculding acqusitions and sale of real estate
+                assests across the Nigerian market. Members of our team have
+                extensive reach with the various Land Registries across the
+                country and have successfully carried out investigation and
+                perfetion of titles and land documentation. We also undertake
+                the seamless syndication and documentation of contracts of sales
+                and perfect the transfer of titles in record time at various
+                land registries within Nigeria. We bring creativity to
+                conveyancing, protection and enforcement of property rights.
               </p>
             </div>
           </div>
@@ -52,7 +56,7 @@ const EntertainmentLaw: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PRACTICE_AREAS.slice(1, 4).map((area, index) => (
+            {PRACTICE_AREAS.slice(0, 3).map((area, index) => (
               <Link to={`/${area.href}`} key={index} className="cursor-pointer">
                 <PracticeAreaCard area={area} />
               </Link>
@@ -63,4 +67,4 @@ const EntertainmentLaw: React.FC = () => {
     </div>
   );
 };
-export default EntertainmentLaw;
+export default RealEstate;

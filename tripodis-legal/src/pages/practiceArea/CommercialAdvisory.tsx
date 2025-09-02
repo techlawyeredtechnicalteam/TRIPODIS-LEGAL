@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Container } from "../../components/ui";
 import PracticeAreaCard from "../PracticeAreaCard";
 
-const SportLaw: React.FC = () => {
+const CommercialAdvisory: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
@@ -12,8 +12,8 @@ const SportLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/sports.webp"
-              alt="Sport Law"
+              src="/entertainment.webp"
+              alt="Entertainment Law"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>
@@ -22,20 +22,15 @@ const SportLaw: React.FC = () => {
           {/* Content Side */}
           <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Sport Law
+              Commercial Advisory
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
               <p className="text-gray-700 leading-relaxed mb-4 text-justify">
-                Our focus on sports comes with market leading experience with
-                some of our industry-defining transactions and cases in the
-                emerging Nigerian industry and the world at large at FIFA and
-                the international Court of Arbitration for Sports. We have
-                first-hand experience with negotiating key industry documents
-                including talent purchase, connection, operations and
-                maintenance and other agreements. We have developed, ahead of
-                the rest of the market, a compliance matrix for players in the
-                emerging sports industry.
+                We have a team of lawyers with extensive experience in
+                business-to-business and consumer-to-business issues related to
+                business formation, contracts, tax, labour and employment,
+                including corporate governance related matters.
               </p>
             </div>
           </div>
@@ -52,7 +47,7 @@ const SportLaw: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PRACTICE_AREAS.slice(0, 3).map((area, index) => (
+            {PRACTICE_AREAS.slice(1, 4).map((area, index) => (
               <Link to={`/${area.href}`} key={index} className="cursor-pointer">
                 <PracticeAreaCard area={area} />
               </Link>
@@ -63,4 +58,4 @@ const SportLaw: React.FC = () => {
     </div>
   );
 };
-export default SportLaw;
+export default CommercialAdvisory;

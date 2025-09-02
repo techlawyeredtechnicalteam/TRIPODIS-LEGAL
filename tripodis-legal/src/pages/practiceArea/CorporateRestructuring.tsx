@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Container } from "../../components/ui";
 import PracticeAreaCard from "../PracticeAreaCard";
 
-const SportLaw: React.FC = () => {
+const CorporateRestructuring: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
@@ -22,20 +22,17 @@ const SportLaw: React.FC = () => {
           {/* Content Side */}
           <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Sport Law
+              Mergers, Acquisitions and Corporate Restructuring
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
               <p className="text-gray-700 leading-relaxed mb-4 text-justify">
-                Our focus on sports comes with market leading experience with
-                some of our industry-defining transactions and cases in the
-                emerging Nigerian industry and the world at large at FIFA and
-                the international Court of Arbitration for Sports. We have
-                first-hand experience with negotiating key industry documents
-                including talent purchase, connection, operations and
-                maintenance and other agreements. We have developed, ahead of
-                the rest of the market, a compliance matrix for players in the
-                emerging sports industry.
+                We have experience advising on various mergers and acquisition
+                transactions including regulatory driven acquisitions and
+                disposals in banking industry as well as strategic mergers and
+                acquisitions in other sectors. We also have experience advising
+                private equity and other funds with investments and exists from
+                their targets.
               </p>
             </div>
           </div>
@@ -63,4 +60,4 @@ const SportLaw: React.FC = () => {
     </div>
   );
 };
-export default SportLaw;
+export default CorporateRestructuring;

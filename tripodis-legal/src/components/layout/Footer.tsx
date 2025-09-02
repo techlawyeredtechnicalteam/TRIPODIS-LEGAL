@@ -64,12 +64,15 @@ const Footer: React.FC = () => {
             >
               {[
                 {
-                  text: "Corporate Law",
-                  href: "/corporate and commercial-law"
+                  text: "Private Equity",
+                  href: "/Private Equity"
                 },
-                { text: "Property Law", href: "/property-law" },
+                {
+                  text: "Intellectual Property",
+                  href: "/Intellectual Property"
+                },
                 { text: "Sports Law", href: "/sport-law" },
-                { text: "Litigation", href: "/litigation" }
+                { text: "Real Estate", href: "/Real Estate" }
               ].map((area) => (
                 <motion.li
                   key={area.text}

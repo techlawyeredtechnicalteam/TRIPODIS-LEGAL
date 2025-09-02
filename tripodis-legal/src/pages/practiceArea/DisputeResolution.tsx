@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Container } from "../../components/ui";
 import PracticeAreaCard from "../PracticeAreaCard";
 
-const LitigationLaw: React.FC = () => {
+const DisputeResolution: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
@@ -13,7 +13,7 @@ const LitigationLaw: React.FC = () => {
           <div className="relative">
             <img
               src="/litigation.webp"
-              alt="Litigation Law"
+              alt="DisputeResolution"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>
@@ -22,22 +22,32 @@ const LitigationLaw: React.FC = () => {
           {/* Content Side */}
           <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Litigation Law
+              Dispute Resolution
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
               <p className="text-gray-700 leading-relaxed mb-4 text-justify">
-                At our firm, we provide strategic representation for individuals
-                and businesses across all stages of the litigation process. We
-                handle case assessment, filing, evidence gathering,
-                negotiations, and courtroom advocacy. Our lawyers are skilled in
-                both trial and appellate practice, ensuring clients receive
-                effective representation at every level. We focus on practical
-                strategies that balance legal strength with cost efficiency,
-                seeking favorable outcomes through settlement where possible,
-                and pursuing litigation vigorously when necessary. Our
-                commitment is to protect our clients&apos; interests and deliver
-                justice with professionalism and diligence.
+                Our focus is on resolving disputes whether by litigation across
+                all levels of the state and federal courts in Nigeria with the
+                ability to handle proceedings in multiple jurisdictions or by
+                international arbiration of commercial disputes. Our lawyers are
+                some of the most experienced and resourceful litigators in
+                Nigeria with the knack for dealing with our clients&apos;
+                interest with creativity, efficiency and practical solutions.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4 text-justify">
+                They understand the intricacies of dealing with investment
+                disputes and tax compliance issues that may arise in any given
+                transaction. They have successfully argured cases at various
+                specialist courts and panels as well as the Appeal and Supreme
+                Courts. Our Arbitration team understands the sensitivity of most
+                disputes arising from commercial transactions, and therefore
+                takes preventive approached to disputes with the ultimate aim of
+                safeguarding business relationships going forward. We poseess
+                the ewquisite experience to render cutting edge arbitration
+                service to our clients with the understanding that businesses
+                increasingly rely on arbitration as the preferred method of
+                dispute resolution.
               </p>
             </div>
           </div>
@@ -65,4 +75,4 @@ const LitigationLaw: React.FC = () => {
     </div>
   );
 };
-export default LitigationLaw;
+export default DisputeResolution;

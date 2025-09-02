@@ -10,7 +10,7 @@ const Layout: React.FC = () => {
   React.useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % sliderImages.length);
-    }, 7000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []); 
 

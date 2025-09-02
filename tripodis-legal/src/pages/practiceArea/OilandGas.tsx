@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { Container } from "../../components/ui";
 import PracticeAreaCard from "../PracticeAreaCard";
 
-const PropertyLaw: React.FC = () => {
+const OilandGas: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-16 lg:pt-16">
       <section className="relative">
@@ -12,8 +12,8 @@ const PropertyLaw: React.FC = () => {
           {/* Image side */}
           <div className="relative">
             <img
-              src="/property.webp"
-              alt="Property Law"
+              src="/sports.webp"
+              alt="Sport Law"
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-blue-900/20"></div>
@@ -22,19 +22,20 @@ const PropertyLaw: React.FC = () => {
           {/* Content Side */}
           <div className="bg-white p-8 lg:p-12 flex flex-col justify-center">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Property Law
+              Oil and Gas
             </h1>
 
             <div className="prose prose-gray max-w-none mb-8">
               <p className="text-gray-700 leading-relaxed mb-4 text-justify">
-                At our firm, we assist clients with drafting and reviewing
-                contracts, conducting due diligence, and navigating regulatory
-                approvals for property transactions. We represent individuals,
-                businesses, and developers in negotiations, land acquisitions,
-                tenancy agreements, and property disputes. Our team combines
-                in-depth legal knowledge with practical insight into the
-                property market, helping clients secure their investments, avoid
-                risks, and achieve their real estate goals.
+                Members of our oil and gas team have acted on some of the
+                largest assest acqusitions in the Nigerian oil and gas industry.
+                Clients have found our experience with the relevant regulations
+                and practices useful in navigating the inricacies of legal and
+                regulatory compliance as well as structuring and delivering
+                transactions. Members of our team have particularly been
+                involved in negotiating contracts in the upStream sector, as
+                well as proffering advice on various exploration and production
+                work.
               </p>
             </div>
           </div>
@@ -51,7 +52,7 @@ const PropertyLaw: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {PRACTICE_AREAS.slice(2, 5).map((area, index) => (
+            {PRACTICE_AREAS.slice(0, 3).map((area, index) => (
               <Link to={`/${area.href}`} key={index} className="cursor-pointer">
                 <PracticeAreaCard area={area} />
               </Link>
@@ -62,4 +63,4 @@ const PropertyLaw: React.FC = () => {
     </div>
   );
 };
-export default PropertyLaw;
+export default OilandGas;
