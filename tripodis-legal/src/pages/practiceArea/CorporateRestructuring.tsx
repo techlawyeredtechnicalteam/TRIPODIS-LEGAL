@@ -6,11 +6,10 @@ import PracticeAreaCard from "../PracticeAreaCard";
 
 const CorporateRestructuring: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white pt-16 lg:pt-16">
-      <section className="relative">
-        <div className="grid lg:grid-cols-2 min-h-[500px]">
+    <div className="bg-white">
+      <section className="min-h-[600px] lg:min-h-[80vh] pt-16 flex flex-col lg:flex-row overflow-hidden">
           {/* Image side */}
-          <div className="relative">
+          <div className="lg:w-1/2 h-64 md:h-auto lg:h-auto relative overflow-hidden">
             <img
               src="/corporate-restructuring.webp"
               alt="Corporate Restructuring"
@@ -36,6 +35,7 @@ const CorporateRestructuring: React.FC = () => {
               </p>
             </div>
           </div>
+        <div className="grid lg:grid-cols-2 min-h-[500px]">
         </div>
       </section>
 

@@ -8,16 +8,16 @@ import { ServicesAnimation } from "../animation/ServiceAnimation";
 const ServiceSection: React.FC = () => {
   return (
     <motion.section
-      className="py-20 bg-gradient-to-b from-gray-50 to-white"
+      className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={ServicesAnimation.containerVariants}
     >
-      <Container className="max-w-7xl mx-auto px-4">
+      <Container size="xl">
         {/* Header Section */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12 md:mb-16"
           variants={ServicesAnimation.containerVariants}
         >
           <motion.div variants={ServicesAnimation.headerItemVariants}>
@@ -26,13 +26,13 @@ const ServiceSection: React.FC = () => {
             </Badge>
           </motion.div>
           <motion.h2
-            className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight"
             variants={ServicesAnimation.headerItemVariants}
           >
             Comprehensive Legal Solutions
           </motion.h2>
           <motion.p
-            className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={ServicesAnimation.headerItemVariants}
           >
             We offer a full range of legal services tailored to meet your
@@ -42,12 +42,12 @@ const ServiceSection: React.FC = () => {
 
         {/* Services Grid */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
           variants={ServicesAnimation.gridVariants}
         >
           {PRACTICE_AREAS.slice(0, 4).map((service, index) => (
             <motion.div key={index} variants={ServicesAnimation.cardVariants}>
-              <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100 h-64">
+              <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100 aspect-[4/3] md:aspect-[3/4]">
                 {/* Image Container */}
                 <Link to={`/${service.href}`} className="block h-full">
                   <div className="relative h-full overflow-hidden">
@@ -65,7 +65,7 @@ const ServiceSection: React.FC = () => {
                     {/* Content */}
                     <div className="absolute bottom-0 left-0 right-0 p-6">
                       <motion.h3
-                        className="text-2xl font-bold text-white"
+                        className="text-xl sm:text-2xl font-bold text-white"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.6, delay: 0.2 }}

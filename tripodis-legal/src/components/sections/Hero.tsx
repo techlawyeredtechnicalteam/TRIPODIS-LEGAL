@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
   };
 
   return (
-    <div className="h-screen overflow-hidden">
+    <div className="h-screen pt-16 lg:pt-20 overflow-hidden">
       {/* slides */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <div
@@ -65,21 +65,21 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
           >
             {/* Main Heading */}
             <motion.div variants={HeroAnimation.fadeInUp} className="mb-6">
-              <h1 className="text-2xl md:text-4xl font-bold leading-tight mb-4 block md:hidden">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 block sm:hidden">
                 Excellence, Professionalism and Innovation
               </h1>
             </motion.div>
 
             <motion.h2
               variants={HeroAnimation.fadeInUp}
-              className="text-lg md:text-2xl font-semibold mb-6 hidden sm:block"
+              className="text-lg sm:text-xl md:text-2xl font-semibold sm:mb-4 md:mb-6 hidden sm:block"
             >
               Helping Clients Move Forward With Clarity And Confidence.
             </motion.h2>
 
             <motion.p
               variants={HeroAnimation.fadeInUp}
-              className="text-base md:text-xl mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               Provide Clients with innovative and functional legal support that
               is firmly rooted in thorough understanding of the applicable legal
@@ -95,7 +95,7 @@ const Hero: React.FC<HeroProps> = ({ current, onBookConsultation }) => {
               >
                 <Button
                   onClick={handleBookConsultation}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-2 sm:py-3 text-lg font-semibold rounded-lg transition-colors duration-200"
                 >
                   Book Consultation
                 </Button>

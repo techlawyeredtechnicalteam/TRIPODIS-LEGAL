@@ -1,8 +1,6 @@
 import React from "react";
-// import { CiUser } from "react-icons/ci";
 import { FiAward } from "react-icons/fi";
 import { MdShield } from "react-icons/md";
-// import { TbTargetArrow } from "react-icons/tb";
 import { Card, Container } from "../components/ui";
 import { motion, useReducedMotion } from "framer-motion";
 import { PiLightbulbThin } from "react-icons/pi";
@@ -70,33 +68,6 @@ const cardHoverVariants = {
 const AboutUsPage: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
 
-  // const stats = [
-  //   {
-  //     icon: TbTargetArrow,
-  //     label: "Strategic Location",
-  //     value: "Lagos",
-  //     color: "text-blue-400"
-  //   },
-  //   {
-  //     icon: CiUser,
-  //     label: "Regional Coverage",
-  //     value: "West Africa",
-  //     color: "text-blue-400"
-  //   },
-  //   {
-  //     icon: PiScales,
-  //     label: "Legal Expertise",
-  //     value: "Comprehensive",
-  //     color: "text-blue-400"
-  //   },
-  //   {
-  //     icon: FiAward,
-  //     label: "Service Focus",
-  //     value: "Business Growth",
-  //     color: "text-blue-400"
-  //   }
-  // ];
-
   const values = [
     {
       title: "We Think Differently",
@@ -124,7 +95,7 @@ const AboutUsPage: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Hero Section - Split Layout */}
-      <section className="min-h-[70vh] lg:min-h-[80vh] pt-16 flex flex-col lg:flex-row overflow-hidden">
+      <section className="min-h-[600px] lg:min-h-[80vh] pt-16 flex flex-col lg:flex-row overflow-hidden">
         {/* Left Side - Image */}
         <motion.div
           animate={{ opacity: 1, scale: 1 }}
@@ -161,10 +132,10 @@ const AboutUsPage: React.FC = () => {
         </motion.div>
 
         {/* Right Side - Content */}
-        <div className="lg:w-1/2 flex items-center justify-center p-8 lg:p-16">
-          <div className="max-w-2xl">
+        <div className="lg:w-1/2 flex items-center justify-center p-6 md:p-8 lg:p-12">
+          <div className="max-w-2xl mx-auto">
             <motion.h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-6 md:mb-8"
               variants={slideInRightVariants}
               initial="hidden"
               animate="visible"
@@ -172,7 +143,7 @@ const AboutUsPage: React.FC = () => {
               Why Tripodis?
             </motion.h1>
             <motion.p
-              className="text-lg text-gray-800 leading-relaxed mb-4 text-justify"
+              className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed mb-4 text-justify"
               variants={slideInRightVariants}
               initial="hidden"
               animate="visible"
@@ -191,7 +162,7 @@ const AboutUsPage: React.FC = () => {
               initial="hidden"
               animate="visible"
               transition={{ delay: 0.4 }}
-              className="text-gray-800 leading-relaxed mb-4 text-justify text-lg"
+              className="text-gray-800 leading-relaxed mb-4 text-justify text-base sm:text-lg md:text-xl"
             >
               We adopt a flexible and result oriented approach to billing. Our
               fees are reflective of the level of expertise and value that we
@@ -201,7 +172,7 @@ const AboutUsPage: React.FC = () => {
               transaction.
             </motion.p>
             <motion.p
-              className="text-blue-500 leading-relaxed text-justify text-lg"
+              className="text-blue-500 leading-relaxed text-justify text-base sm:text-lg md:text-xl"
               variants={slideInRightVariants}
               initial="hidden"
               animate="visible"
@@ -215,29 +186,32 @@ const AboutUsPage: React.FC = () => {
 
       {/* Core Values Section */}
       <motion.section
-        className="py-10 lg:py-16"
+        className="py-8 md:py-12 lg:py-16"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={staggerContainerVariants}
       >
         <Container>
-          <motion.div className="text-center mb-16" variants={fadeInUpVariants}>
+          <motion.div
+            className="text-center md-12 md:mb-16"
+            variants={fadeInUpVariants}
+          >
             <motion.h2
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6"
+              className="text-xl sm:text-2xl font-bold text-gray-800 mb-6"
               variants={fadeInUpVariants}
             >
               Our Core Values
             </motion.h2>
             <motion.p
-              className="text-lg text-gray-700 max-w-3xl mx-auto"
+              className="text-sm sm:text-base md:text-lg text-gray-700 max-w-3xl mx-auto"
               variants={fadeInUpVariants}
             >
               Our Commitment to Excellence is Unrivaled
             </motion.p>
           </motion.div>
           <motion.div
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
             variants={staggerContainerVariants}
           >
             {values.map((value, index) => {
@@ -275,7 +249,7 @@ const AboutUsPage: React.FC = () => {
                         </motion.div>
                       </motion.div>
                       <motion.h3
-                        className="text-xl font-semibold text-gray-800 mb-4"
+                        className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.7 + index * 0.2 }}
@@ -283,7 +257,7 @@ const AboutUsPage: React.FC = () => {
                         {value.title}
                       </motion.h3>
                       <motion.p
-                        className="text-gray-700 leading-relaxed text-justify flex-1"
+                        className="text-gray-700 leading-relaxed text-justify flex-1 text-sm sm:text-base md:text-lg"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.8 + index * 0.2 }}
@@ -298,56 +272,6 @@ const AboutUsPage: React.FC = () => {
           </motion.div>
         </Container>
       </motion.section>
-
-      {/* Stats Section */}
-      {/* <motion.section
-        className="py-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-80px" }}
-        variants={staggerContainerVariants}
-      >
-        <Container>
-          <motion.div
-            className="grid grid-cols-2 lg:grid-cols-4 gap-6"
-            variants={staggerContainerVariants}
-          >
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <motion.div key={index} variants={fadeInUpVariants}>
-                  <Card className="p-6 text-center h-full">
-                    <motion.div
-                      className="flex justify-center mb-4"
-                      variants={scaleInVariants}
-                    >
-                      <motion.div className="w-12 h-12 bg-blue/10 rounded-lg flex items-center justify-center">
-                        <IconComponent className={`w-6 h-6 ${stat.color}`} />
-                      </motion.div>
-                    </motion.div>
-                    <motion.div
-                      className="text-lg lg:text-xl font-bold text-gray-700 mb-2"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.3 + index * 0.1 }}
-                    >
-                      {stat.value}
-                    </motion.div>
-                    <motion.div
-                      className="text-sm text-gray-700"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.4 + index * 0.1 }}
-                    >
-                      {stat.label}
-                    </motion.div>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </Container>
-      </motion.section> */}
     </div>
   );
 };

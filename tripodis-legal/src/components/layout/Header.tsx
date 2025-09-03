@@ -37,11 +37,11 @@ const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-header-white shadow-md">
+    <nav className="fixed top-0 z-50 w-full transition-all duration-300 bg-white shadow-lg">
       <Container size="full">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center shrink-0 p-8">
+          <div className="flex items-center shrink-0 px-8 py-2">
             <button type="button" onClick={() => handleNavClick("/")}>
               <img
                 src="/logo.webp"
