@@ -34,12 +34,14 @@ const PrivateEquity: React.FC = () => {
               execution capabilities in investments, mergers and acquisitions
               with contemporary in-depth tax and regulatory advisory to give our
               clients practical, cost effective legal advice and integrated
-              private equity experience. We regularly advise assest managers,
-              investment funds and institutional investors on a wide range of
-              legal and regulatory issues relating to their investment and
-              assest classes. We also represent portfolio companies of our
-              private equity fund clients in connection with their financing,
-              mergers and acquisitions.
+              private equity experience.
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed mb-4 text-justify">
+              We regularly advise asset managers, investment funds and
+              institutional investors on a wide range of legal and regulatory
+              issues relating to their investment and asset classes. We also
+              represent portfolio companies of our private equity fund clients
+              in connection with their financing, mergers and acquisitions.
             </p>
           </div>
         </div>
