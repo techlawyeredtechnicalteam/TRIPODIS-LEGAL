@@ -84,7 +84,7 @@ const AboutUsPage: React.FC = () => {
       color: "bg-blue-500/20 text-blue-400"
     },
     {
-      title: "We are Fides",
+      title: "We are Tripodis",
       description:
         "Rooted in our name is the assurance that you can rely on us. We ensure that the personal attention and experience of our senior lawyers are available to you at all times.",
       icon: PiLightbulbThin,

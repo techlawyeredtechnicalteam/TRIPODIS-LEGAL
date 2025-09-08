@@ -6,69 +6,77 @@ import type { ServiceArea } from "../types/ServiceArea";
 export const NAVIGATION_ITEMS: NavItem[] = [
   { label: "About Us", href: "/about" },
   { label: "Practice Areas", href: "/practice-page" },
-  { label: "People", href: "/people" }
+  { label: "People", href: "/people" },
+  { label: "Insight", href: "/insight" }
 ];
 
 export const PRACTICE_AREAS: ServiceArea[] = [
   {
     id: "1",
-    title: "Private Equity",
-    image: "/private equity.webp",
-    href: "Private Equity"
+    title: "Intellectual Property",
+    image: "/intellectual property.webp",
+    href: "practiceArea/Intellectual-Property"
   },
   {
     id: "2",
-    title: "Mergers, Acquisitions and Corporate Restructuring",
-    image: "/corporate-restructuring.webp",
-    href: "Mergers, Acquisitions and Corporate Restructuring"
+    title: "Dispute Resolution",
+    image: "/dispute resolution.webp",
+    href: "practiceArea/Dispute-Resolution"
   },
+
   {
     id: "3",
-    title: "Sports Law",
-    image: "/sports.webp",
-    href: "sport-law"
+    title: "Commercial Advisory",
+    image: "/commercial-advisory.webp",
+    href: "practiceArea/Commercial-Advisory"
   },
   {
     id: "4",
-    title: "Intellectual Property",
-    image: "/intellectual property.webp",
-    href: "Intellectual Property"
+    title: "Entertainment Law",
+    image: "/entertainment.webp",
+    href: "practiceArea/entertainment-law"
   },
   {
     id: "5",
-    title: "Oil and Gas",
-    image: "/oil-and-gas.webp",
-    href: "Oil and Gas"
+    title: "Private Equity",
+    image: "/private equity.webp",
+    href: "practiceArea/Private-Equity"
   },
   {
     id: "6",
-    title: "Commercial Advisory",
-    image: "/commercial-advisory.webp",
-    href: "Commercial Advisory"
+    title: "Oil and Gas",
+    image: "/oil-and-gas.webp",
+    href: "practiceArea/Oil-and-Gas"
   },
   {
     id: "7",
-    title: "Compliance & Risk Management",
-    image: "/risk.webp",
-    href: "Compliance & Risk Management"
+    title: "Sports Law",
+    image: "/sports.webp",
+    href: "practiceArea/sport-law"
   },
   {
     id: "8",
-    title: "Dispute Resolution",
-    image: "/dispute resolution.webp",
-    href: "Dispute Resolution"
+    title: "Compliance & Risk Management",
+    image: "/risk.webp",
+    href: "practiceArea/Compliance-&-Risk-Management"
   },
   {
     id: "9",
-    title: "Real Estate",
-    image: "/real estate.webp",
-    href: "Real Estate"
+    title: "Mergers, Acquisitions and Corporate Restructuring",
+    image: "/corporate-restructuring.webp",
+    href: "practiceArea/Mergers-Acquisitions-and-Corporate-Restructuring"
   },
   {
     id: "10",
+    title: "Real Estate",
+    image: "/real estate.webp",
+    href: "practiceArea/Real-Estate"
+  },
+  {
+    id: "11",
     title: "Banking and Finance",
     image: "/banking.webp",
-    href: "Banking and Finance"
+    href: "practiceArea/Banking-and-Finance"
   }
 ];
 
@@ -88,21 +96,21 @@ export const teamMembers: TeamMember[] = [
     name: "Muhammed K. Audu",
     position: "Partner",
     image: "/Kameel Audu.webp",
-    href: "Muhammed K. Audu"
+    href: "profile/Muhammed-K.-Audu"
   },
   {
     id: "2",
     name: "Gabriel Ileanwa Peter",
     position: "Partner",
     image: "/Ileanwa Peter.webp",
-    href: "Gabriel Ileanwa Peter"
+    href: "profile/Gabriel-Ileanwa-Peter"
   },
   {
     id: "3",
     name: "Nurudeen Abimaje",
     position: "Partner",
     image: "/Nurudeen Abimaje.webp",
-    href: "Nurudeen Abimaje"
+    href: "profile/Nurudeen-Abimaje"
   },
   {
     id: "4",

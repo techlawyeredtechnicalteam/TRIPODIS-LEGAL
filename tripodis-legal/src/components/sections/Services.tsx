@@ -45,8 +45,11 @@ const ServiceSection: React.FC = () => {
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8"
           variants={ServicesAnimation.gridVariants}
         >
-          {PRACTICE_AREAS.slice(0, 4).map((service, index) => (
-            <motion.div key={index} variants={ServicesAnimation.cardVariants}>
+          {PRACTICE_AREAS.slice(0, 4).map((service) => (
+            <motion.div
+              key={service.id}
+              variants={ServicesAnimation.cardVariants}
+            >
               <Card className="group relative overflow-hidden bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform border border-gray-100 aspect-[4/3] md:aspect-[3/4]">
                 {/* Image Container */}
                 <Link to={`/${service.href}`} className="block h-full">

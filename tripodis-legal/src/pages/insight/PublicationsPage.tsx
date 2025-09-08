@@ -1,0 +1,29 @@
+import { FaFileSignature } from "react-icons/fa6";
+import InsightsLayout from "../../components/layout/InsightLayout";
+
+const PublicationsPage = () => {
+  return (
+    <InsightsLayout
+      title="Publications"
+      subtitle="Legal insights, research papers, and thought leadership from our expert team"
+      icon={
+        <FaFileSignature className="w-16 h-16 text-blue-500 mx-auto mb-4" />
+      }
+    >
+      <div className="text-center">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12">
+          <FaFileSignature className="w-24 h-24 text-gray-300 mx-auto mb-6" />
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+            Publications Coming Soon
+          </h2>
+          <p className="text-gray-600 mb-8 max-w-lg mx-auto">
+            We're currently curating our latest publications, research papers,
+            and legal insights. Check back soon for comprehensive resources on
+            various legal topics.
+          </p>
+        </div>
+      </div>
+    </InsightsLayout>
+  );
+};
+export default PublicationsPage;

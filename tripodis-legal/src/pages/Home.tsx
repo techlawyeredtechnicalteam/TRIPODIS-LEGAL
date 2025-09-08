@@ -1,16 +1,20 @@
 import React from "react";
-import { Hero } from "../components/sections";
 import ContactSection from "../components/sections/Contact";
 import ServiceSection from "../components/sections/Services";
 import AboutSection from "../components/sections/AboutSection";
-import { useOutletContext } from "react-router";
+import { sliderImages } from "../utils/constant";
+import { Hero } from "../components/sections";
 
 const Home: React.FC = () => {
-  const { current, setCurrent } = useOutletContext<{
-    current: number;
-    setCurrent: React.Dispatch<React.SetStateAction<number>>;
-  }>();
+  const [current, setCurrent] = React.useState(0);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % sliderImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <>
