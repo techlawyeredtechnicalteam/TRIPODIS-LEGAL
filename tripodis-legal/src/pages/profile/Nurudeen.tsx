@@ -26,7 +26,7 @@ const Nurudeen: React.FC = () => {
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/Nurudeen Abimaje.webp"
+                    src="/Nurudeen.jpg"
                     alt="Nurudeen Abimaje"
                     className="w-48 h-64 object-cover rounded-lg shadow-lg mx-auto md:mx-0"
                   />

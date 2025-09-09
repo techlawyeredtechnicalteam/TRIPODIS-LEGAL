@@ -109,7 +109,7 @@ export const teamMembers: TeamMember[] = [
     id: "3",
     name: "Nurudeen Abimaje",
     position: "Partner",
-    image: "/Nurudeen Abimaje.webp",
+    image: "/Nurudeen.jpg",
     href: "profile/Nurudeen-Abimaje"
   },
   {
